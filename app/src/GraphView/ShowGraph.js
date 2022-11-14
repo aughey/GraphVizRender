@@ -18,8 +18,8 @@ export function ShowGraph({ graph }) {
     return "ID" + i.replace(/-/g, '');
   }
 
-  var nodes = graph.Nodes.map(n => `${id(n.Id)} [label="${n.Kind}"];`);
-  var connections = graph.Connections.map(c => `${id(c.From)} -> ${id(c.To)};`);
+  var nodes = Object.keys(graph.Nodes).map(k => `${id(k)} [label="${graph.Nodes[k].Kind}"];`);
+  var connections = Object.keys(graph.Connections).map(k => `${id(graph.Connections[k].From)} -> ${id(graph.Connections[k].To)};`);
 
   const dot = `
 digraph{

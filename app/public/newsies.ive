@@ -1,0 +1,4233 @@
+{
+  "Nodes": [
+    {
+      "Id": "ad1a6229-db8d-4009-8b30-d3f6c146cf48",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.String",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": -439.67987278051106,
+        "y": 12.551706620703698
+      },
+      "Name": "Value-StringValue",
+      "Properties": {
+        "State": "/drive-c/Sandbox/yolov5/"
+      }
+    },
+    {
+      "Id": "6f8fabfe-bab1-4874-a610-bc710bc2b4c7",
+      "Inputs": [
+        {
+          "Kind": "System.String",
+          "Name": "urlprefix"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "EmbedIOOperations.EmbedIOOps\u002BServerFuture",
+          "Name": "server"
+        }
+      ],
+      "Pos": {
+        "x": -455.29039315618843,
+        "y": -1262.434711524091
+      },
+      "Name": "EmbedIOOps-CreateServer",
+      "Properties": {}
+    },
+    {
+      "Id": "8ad6880e-8bcf-47bc-af8c-ae1b80d30736",
+      "Inputs": [
+        {
+          "Kind": "AutoCam.IVideoContent",
+          "Name": "content"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "System.Int32",
+          "Name": "count"
+        },
+        {
+          "Kind": "System.Single",
+          "Name": "fps"
+        },
+        {
+          "Kind": "System.Collections.Generic.IEnumerable\u00601[[AutoCam.FrameContent, AutoCamLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+          "Name": "frames"
+        }
+      ],
+      "Pos": {
+        "x": 1002.7041713138556,
+        "y": 469.87510079974487
+      },
+      "Name": "AutoCam-VideoContentDecompose",
+      "Properties": {}
+    },
+    {
+      "Id": "04736444-8be8-4b42-bfe6-65040254c51e",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.String",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": -447.9645140521181,
+        "y": 209.9444586833628
+      },
+      "Name": "Value-StringValue",
+      "Properties": {
+        "State": "newsies/friday"
+      }
+    },
+    {
+      "Id": "0124a7a0-5812-4258-a541-2084e1f7a48d",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.String",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": -436.42349762920077,
+        "y": 433.32383513130856
+      },
+      "Name": "Value-StringValue",
+      "Properties": {
+        "State": "YOLO_grid"
+      }
+    },
+    {
+      "Id": "468ded7c-811c-43f1-bd1b-61643e19451d",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.String",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": -446.44881504386393,
+        "y": 321.20125147442934
+      },
+      "Name": "Value-StringValue",
+      "Properties": {
+        "State": "/labels/"
+      }
+    },
+    {
+      "Id": "e9f83bcb-b57c-4e3a-ba95-2867930208ce",
+      "Inputs": [
+        {
+          "Kind": "System.String",
+          "Name": "string1"
+        },
+        {
+          "Kind": "System.String",
+          "Name": "string2"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "System.String",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": -144.8579476603259,
+        "y": 139.38168977153725
+      },
+      "Name": "StringConcat",
+      "Properties": {}
+    },
+    {
+      "Id": "a6794b0d-9f01-40de-a82f-d79a0d7759e8",
+      "Inputs": [
+        {
+          "Kind": "System.String",
+          "Name": "string1"
+        },
+        {
+          "Kind": "System.String",
+          "Name": "string2"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "System.String",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": -170.1899715066674,
+        "y": 282.0907631440511
+      },
+      "Name": "StringConcat",
+      "Properties": {}
+    },
+    {
+      "Id": "3e1d4801-c17f-4dd1-bb4c-b522c05908c0",
+      "Inputs": [
+        {
+          "Kind": "System.String",
+          "Name": "string1"
+        },
+        {
+          "Kind": "System.String",
+          "Name": "string2"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "System.String",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": -164.72912393721484,
+        "y": 394.3462478134414
+      },
+      "Name": "StringConcat",
+      "Properties": {}
+    },
+    {
+      "Id": "df386e7e-31d7-4c51-a5f7-8de2569412d5",
+      "Inputs": [
+        {
+          "Kind": "System.Double",
+          "Name": "padding"
+        },
+        {
+          "Kind": "System.Double",
+          "Name": "aspect"
+        },
+        {
+          "Kind": "System.Double",
+          "Name": "video_aspect"
+        },
+        {
+          "Kind": "System.Double",
+          "Name": "focal_length"
+        },
+        {
+          "Kind": "System.Double",
+          "Name": "max_zoom"
+        },
+        {
+          "Kind": "System.Double",
+          "Name": "head_room"
+        },
+        {
+          "Kind": "System.Double",
+          "Name": "camera_roll"
+        },
+        {
+          "Kind": "System.Double",
+          "Name": "camera_pitch"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "AutoCam.CameraParameters",
+          "Name": "parameters"
+        }
+      ],
+      "Pos": {
+        "x": 1555.830788971843,
+        "y": 713.8723104949129
+      },
+      "Name": "AutoCam-CameraParametersCreate",
+      "Properties": {}
+    },
+    {
+      "Id": "c46ba1e4-35eb-4f0f-abcf-305cde4bc9aa",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.Double",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": 1225.7020266266945,
+        "y": 638.6470936063303
+      },
+      "Name": "Value-DoubleValue",
+      "Properties": {
+        "State": "1.05"
+      }
+    },
+    {
+      "Id": "76a9c577-e6a6-440c-a7d3-c5ded644d4d6",
+      "Inputs": [
+        {
+          "Kind": "System.Double",
+          "Name": "input"
+        },
+        {
+          "Kind": "System.Double",
+          "Name": "divisor"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "System.Double",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": 1240.4966086870575,
+        "y": 709.1568757986447
+      },
+      "Name": "DoubleDivide",
+      "Properties": {}
+    },
+    {
+      "Id": "51b99222-44ab-45e4-b795-201d42f28bad",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.Double",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": 998.1793552124728,
+        "y": 711.1829645595278
+      },
+      "Name": "Value-DoubleValue",
+      "Properties": {
+        "State": "16"
+      }
+    },
+    {
+      "Id": "574236df-d053-471a-b436-4f9aad53fbe6",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.Double",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": 1000.7711868059598,
+        "y": 784.1218104769823
+      },
+      "Name": "Value-DoubleValue",
+      "Properties": {
+        "State": "9"
+      }
+    },
+    {
+      "Id": "b404bfb3-7cf0-4b2c-9a2d-98e89770383c",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.Double",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": 1234.9767726796508,
+        "y": 816.8390195442541
+      },
+      "Name": "Value-DoubleValue",
+      "Properties": {
+        "State": "4.705882352941177"
+      }
+    },
+    {
+      "Id": "0e912911-4bf5-4627-abdf-f5872f645550",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.Double",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": 1231.1391122055693,
+        "y": 891.1410890724427
+      },
+      "Name": "Value-DoubleValue",
+      "Properties": {
+        "State": "2"
+      }
+    },
+    {
+      "Id": "351a7a7f-0d14-4302-a479-edba092fdfdc",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.Double",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": 1233.3562459574246,
+        "y": 964.9278751733013
+      },
+      "Name": "Value-DoubleValue",
+      "Properties": {
+        "State": "0"
+      }
+    },
+    {
+      "Id": "03d85a83-a447-4fa1-aa37-01041c7e8896",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.Double",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": 1234.9921072045918,
+        "y": 1106.2704537575603
+      },
+      "Name": "Value-DoubleValue",
+      "Properties": {
+        "State": "4"
+      }
+    },
+    {
+      "Id": "2d16ed9f-9e05-4f2f-ac7f-3e5fa1c6ce6c",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.Double",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": 1232.5090976473543,
+        "y": 1037.2971616004993
+      },
+      "Name": "Value-DoubleValue",
+      "Properties": {
+        "State": "0"
+      }
+    },
+    {
+      "Id": "f2a9252f-490a-4cd4-b6c8-59c65d5f668b",
+      "Inputs": [
+        {
+          "Kind": "System.Object",
+          "Name": "input"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "System.String",
+          "Name": "json"
+        }
+      ],
+      "Pos": {
+        "x": 2608.8030749409727,
+        "y": 434.2119794955306
+      },
+      "Name": "JSONSerialize",
+      "Properties": {}
+    },
+    {
+      "Id": "ccac0a6e-e138-41b6-a33d-bb5a941f74d8",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.Net.Sockets.UdpClient",
+          "Name": "client"
+        }
+      ],
+      "Pos": {
+        "x": 2874.5427508343887,
+        "y": 155.63652434848186
+      },
+      "Name": "Network-UDPClient",
+      "Properties": {}
+    },
+    {
+      "Id": "5759cce1-b050-44bf-ab15-6ea3c7f3ed29",
+      "Inputs": [
+        {
+          "Kind": "System.Net.Sockets.UdpClient",
+          "Name": "client"
+        },
+        {
+          "Kind": "System.String",
+          "Name": "host"
+        },
+        {
+          "Kind": "System.Int32",
+          "Name": "port"
+        },
+        {
+          "Kind": "System.Byte[]",
+          "Name": "data"
+        }
+      ],
+      "Outputs": [],
+      "Pos": {
+        "x": 3161.609270890714,
+        "y": 403.8850807972582
+      },
+      "Name": "Network-UDPSend",
+      "Properties": {}
+    },
+    {
+      "Id": "e30f83d2-8336-4c01-8fd1-8c6357172e1f",
+      "Inputs": [
+        {
+          "Kind": "System.String",
+          "Name": "str"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "System.Byte[]",
+          "Name": "bytes"
+        }
+      ],
+      "Pos": {
+        "x": 2877.9550514046205,
+        "y": 476.6787480743891
+      },
+      "Name": "StringToBytes",
+      "Properties": {}
+    },
+    {
+      "Id": "2a9954b8-3623-4797-a44e-caefb54e512d",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.String",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": 2867.492591950833,
+        "y": 247.84408832332028
+      },
+      "Name": "Value-StringValue",
+      "Properties": {
+        "State": "host.docker.internal"
+      }
+    },
+    {
+      "Id": "283bff80-dee5-4443-9e6c-490820b7dd18",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.Int32",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": 2868.602952673467,
+        "y": 337.1977118390088
+      },
+      "Name": "Value-IntValue",
+      "Properties": {
+        "State": "8888"
+      }
+    },
+    {
+      "Id": "b44093dd-1b8a-484e-a1da-693c8c551dfd",
+      "Inputs": [
+        {
+          "Kind": "System.Int32",
+          "Name": "frame"
+        },
+        {
+          "Kind": "AutoCam.PoseData",
+          "Name": "pose"
+        },
+        {
+          "Kind": "AutoCam.CameraParameters",
+          "Name": "camera"
+        },
+        {
+          "Kind": "System.String",
+          "Name": "video_file"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "AutoCam.PoseCamera",
+          "Name": "posecamera"
+        }
+      ],
+      "Pos": {
+        "x": 2245.6540369724207,
+        "y": 484.66648190133196
+      },
+      "Name": "AutoCam-CombinePoseCamera",
+      "Properties": {}
+    },
+    {
+      "Id": "7b4b67df-24fb-4bdd-925c-edbe44e46abe",
+      "Inputs": [
+        {
+          "Kind": "System.Int32",
+          "Name": "input"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "System.Int32",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": 1610.7253830768775,
+        "y": -125.4912537255446
+      },
+      "Name": "IntCopy",
+      "Properties": {}
+    },
+    {
+      "Id": "903e3915-b07d-4464-920a-539c38d2bf78",
+      "Inputs": [
+        {
+          "Kind": "System.Int32",
+          "Name": "pre_frames"
+        },
+        {
+          "Kind": "System.Int32",
+          "Name": "post_frames"
+        },
+        {
+          "Kind": "System.Int32",
+          "Name": "keyframe_interval"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "IVEAutoCam.StaticMethods\u002BAutoCamParams",
+          "Name": "parameters"
+        }
+      ],
+      "Pos": {
+        "x": 2250.5376479405145,
+        "y": -604.5625559973405
+      },
+      "Name": "AutoCam-CreateAutocamParameters",
+      "Properties": {}
+    },
+    {
+      "Id": "8b5d86ff-3b96-4838-a15e-bbacd2e564ce",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.Int32",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": 1905.237048045413,
+        "y": -674.5598373835229
+      },
+      "Name": "Value-IntValue",
+      "Properties": {
+        "State": "180"
+      }
+    },
+    {
+      "Id": "07330c85-d8fb-4d7f-ada5-3aae5ad12aac",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.Int32",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": 1899.573773468224,
+        "y": -574.4838974595115
+      },
+      "Name": "Value-IntValue",
+      "Properties": {
+        "State": "180"
+      }
+    },
+    {
+      "Id": "53e6dc21-48c4-43e5-944c-f06cdaf313eb",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.Int32",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": 1907.3958449670627,
+        "y": -485.2601638576199
+      },
+      "Name": "Value-IntValue",
+      "Properties": {
+        "State": "360"
+      }
+    },
+    {
+      "Id": "0aee60f7-c961-4848-9e28-70e64594d532",
+      "Inputs": [
+        {
+          "Kind": "System.Int32",
+          "Name": "input"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "System.Int32",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": 2819.8582743341544,
+        "y": -488.06321444837704
+      },
+      "Name": "IntCopy",
+      "Properties": {}
+    },
+    {
+      "Id": "3749c656-0e3d-43ca-9b08-545e9fb4fa19",
+      "Inputs": [
+        {
+          "Kind": "System.Int32",
+          "Name": "frame"
+        },
+        {
+          "Kind": "IVEAutoCam.StaticMethods\u002BPoseFunc",
+          "Name": "pose_func"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "AutoCam.PoseData",
+          "Name": "pose"
+        }
+      ],
+      "Pos": {
+        "x": 3248.371151627889,
+        "y": -456.92756193024087
+      },
+      "Name": "AutoCam-PoseComputer",
+      "Properties": {}
+    },
+    {
+      "Id": "ac658eac-f665-4ec4-9f2b-6fbe4c5e5b93",
+      "Inputs": [
+        {
+          "Kind": "AutoCam.IVideoContent",
+          "Name": "content_provider"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "AutoCam.IVideoContent",
+          "Name": "cached_provider"
+        }
+      ],
+      "Pos": {
+        "x": 641.1876370803476,
+        "y": 1390.2702208011906
+      },
+      "Name": "AutoCam-VideoContentLRUCache",
+      "Properties": {}
+    },
+    {
+      "Id": "c6c7b44e-fea5-47f0-a7a0-dcf5a35a720f",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.String",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": 1997.435725501341,
+        "y": 845.0285946195244
+      },
+      "Name": "Value-StringValue",
+      "Properties": {
+        "State": "E:/FullRecolor.mov"
+      }
+    },
+    {
+      "Id": "f79ee94b-a53d-43c0-a47b-dfe57e307586",
+      "Inputs": [
+        {
+          "Kind": "System.Double",
+          "Name": "y"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "IVEAutoCam.StaticMethods\u002BDetectionFilter",
+          "Name": "filter"
+        }
+      ],
+      "Pos": {
+        "x": 2085.042451400246,
+        "y": -410.40594642699807
+      },
+      "Name": "AutoCam-DetectionYGreaterThanFunc",
+      "Properties": {}
+    },
+    {
+      "Id": "d0339660-9cb3-4c92-9ea1-d485da2c3de6",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.Double",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": 1858.4393455875183,
+        "y": -295.07924281409
+      },
+      "Name": "Value-DoubleValue",
+      "Properties": {
+        "State": "0.75"
+      }
+    },
+    {
+      "Id": "f3d39195-fbc2-4328-ba55-4dd61c667639",
+      "Inputs": [
+        {
+          "Kind": "System.Double",
+          "Name": "y"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "IVEAutoCam.StaticMethods\u002BDetectionFilter",
+          "Name": "filter"
+        }
+      ],
+      "Pos": {
+        "x": 2093.158168517055,
+        "y": -314.8973806605783
+      },
+      "Name": "AutoCam-DetectionYLessThanFunc",
+      "Properties": {}
+    },
+    {
+      "Id": "f96df2f3-d513-4e53-8bd7-f7e252cf32d3",
+      "Inputs": [
+        {
+          "Kind": "IVEAutoCam.StaticMethods\u002BPoseFunc",
+          "Name": "pose_func"
+        },
+        {
+          "Kind": "System.String",
+          "Name": "filename"
+        },
+        {
+          "Kind": "System.Collections.Generic.IEnumerable\u00601[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+          "Name": "frame_range"
+        }
+      ],
+      "Outputs": [],
+      "Pos": {
+        "x": 3671.734382642141,
+        "y": -310.5800420866974
+      },
+      "Name": "Unity-WritePoseToChan",
+      "Properties": {}
+    },
+    {
+      "Id": "7bf6d22c-2fa2-4c56-a67e-cc7329127ad1",
+      "Inputs": [
+        {
+          "Kind": "System.Int32",
+          "Name": "min"
+        },
+        {
+          "Kind": "System.Int32",
+          "Name": "max"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "System.Collections.Generic.IEnumerable\u00601[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+          "Name": "range"
+        }
+      ],
+      "Pos": {
+        "x": 3395.114457418993,
+        "y": -143.2988810039937
+      },
+      "Name": "Unity-IntRange",
+      "Properties": {}
+    },
+    {
+      "Id": "b6cc394f-ce92-4cc5-8e5c-3ff1e2eb0c33",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.String",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": 3385.2770468525623,
+        "y": 123.37247256407719
+      },
+      "Name": "Value-StringValue",
+      "Properties": {
+        "State": "thirdmid.chan"
+      }
+    },
+    {
+      "Id": "22677979-6b55-4c46-85a1-99aa6ada35ae",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.Int32",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": 3200.3427344536576,
+        "y": -161.64161453325343
+      },
+      "Name": "Value-IntValue",
+      "Properties": {
+        "State": "1"
+      }
+    },
+    {
+      "Id": "7e80e1a5-d58b-411e-b217-4d7ac781061c",
+      "Inputs": [
+        {
+          "Kind": "IVEAutoCam.StaticMethods\u002BDetectionFilter",
+          "Name": "filter1"
+        },
+        {
+          "Kind": "IVEAutoCam.StaticMethods\u002BDetectionFilter",
+          "Name": "filter2"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "IVEAutoCam.StaticMethods\u002BDetectionFilter",
+          "Name": "combined"
+        }
+      ],
+      "Pos": {
+        "x": 2448.798960759349,
+        "y": -396.72921366157743
+      },
+      "Name": "AutoCam-DetectionCombineAnd",
+      "Properties": {}
+    },
+    {
+      "Id": "6905ec6e-ddb8-436c-ab6c-58558b71a6e8",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.Double",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": 1874.777007118538,
+        "y": -387.9211669607243
+      },
+      "Name": "Value-DoubleValue",
+      "Properties": {
+        "State": "0.1"
+      }
+    },
+    {
+      "Id": "d7563f76-b853-4650-8eb3-28da3b06dff4",
+      "Inputs": [
+        {
+          "Kind": "System.String",
+          "Name": "string1"
+        },
+        {
+          "Kind": "System.String",
+          "Name": "string2"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "System.String",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": 3548.4129927574522,
+        "y": -38.826096007465495
+      },
+      "Name": "StringConcat",
+      "Properties": {}
+    },
+    {
+      "Id": "8aa7f744-0282-4270-b60f-e4d1b5616a43",
+      "Inputs": [
+        {
+          "Kind": "System.String",
+          "Name": "prefix"
+        },
+        {
+          "Kind": "System.UInt64",
+          "Name": "framecount"
+        },
+        {
+          "Kind": "System.Single",
+          "Name": "fps"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "AutoCam.IVideoContent",
+          "Name": "content"
+        }
+      ],
+      "Pos": {
+        "x": 182.97566032967472,
+        "y": 672.7261483659197
+      },
+      "Name": "AutoCam-IncrementalYoloReader",
+      "Properties": {}
+    },
+    {
+      "Id": "fed31814-8050-4f2f-a09c-f1e618df91c2",
+      "Inputs": [
+        {
+          "Kind": "IVEAutoCam.StaticMethods\u002BDetectionFilter",
+          "Name": "filter1"
+        },
+        {
+          "Kind": "IVEAutoCam.StaticMethods\u002BDetectionFilter",
+          "Name": "filter2"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "IVEAutoCam.StaticMethods\u002BDetectionFilter",
+          "Name": "combined"
+        }
+      ],
+      "Pos": {
+        "x": 2553.783311689128,
+        "y": -252.17241647574602
+      },
+      "Name": "AutoCam-DetectionCombineAnd",
+      "Properties": {}
+    },
+    {
+      "Id": "574cd8cf-5075-4340-802b-58ce8bf63d56",
+      "Inputs": [
+        {
+          "Kind": "System.Double",
+          "Name": "c"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "IVEAutoCam.StaticMethods\u002BDetectionFilter",
+          "Name": "filter"
+        }
+      ],
+      "Pos": {
+        "x": 2188.3148965374244,
+        "y": -189.62583820830935
+      },
+      "Name": "AutoCam-ConfidenceGreaterThanFunc",
+      "Properties": {}
+    },
+    {
+      "Id": "a1eca974-8183-4a1e-b6f6-7f66e2fdf8ec",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.Double",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": 1967.705225877156,
+        "y": -86.72809824590577
+      },
+      "Name": "Value-DoubleValue",
+      "Properties": {
+        "State": "0.5"
+      }
+    },
+    {
+      "Id": "79c9780b-d0bd-456f-9540-085f7bbf6011",
+      "Inputs": [
+        {
+          "Kind": "System.Double",
+          "Name": "x"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "IVEAutoCam.StaticMethods\u002BDetectionFilter",
+          "Name": "filter"
+        }
+      ],
+      "Pos": {
+        "x": 219.07305240100257,
+        "y": 1733.9171349213889
+      },
+      "Name": "AutoCam-DetectionXGreaterThanFunc",
+      "Properties": {}
+    },
+    {
+      "Id": "4eaa4d26-624b-492d-8a0e-c12c7c2d43db",
+      "Inputs": [
+        {
+          "Kind": "System.String",
+          "Name": "path"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "LevelDBStore.LevelDBPackage",
+          "Name": "db"
+        }
+      ],
+      "Pos": {
+        "x": 11.311314106712757,
+        "y": -100.07003345306586
+      },
+      "Name": "LevelDB-CreateDatabase",
+      "Properties": {}
+    },
+    {
+      "Id": "7025e0a5-2ff1-4d3d-b806-9cf13b4f9d15",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.Double",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": -26.20723987852807,
+        "y": 1821.3549407025514
+      },
+      "Name": "Value-DoubleValue",
+      "Properties": {
+        "State": "0"
+      }
+    },
+    {
+      "Id": "7c0f5b16-5613-4795-a5c2-363b22d36176",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.String",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": -186,
+        "y": -178
+      },
+      "Name": "Value-StringValue",
+      "Properties": {
+        "State": "framecache4"
+      }
+    },
+    {
+      "Id": "f231be6b-4bff-4ca5-b3da-ade3c636bd88",
+      "Inputs": [
+        {
+          "Kind": "System.String",
+          "Name": "host"
+        },
+        {
+          "Kind": "System.Int32",
+          "Name": "port"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "System.Action\u00601[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+          "Name": "action"
+        }
+      ],
+      "Pos": {
+        "x": 3707.1009322196333,
+        "y": 455.64473875870044
+      },
+      "Name": "Network-CreateTCPSendAction",
+      "Properties": {}
+    },
+    {
+      "Id": "c41a71a8-d0a2-4f39-99f9-ad8f344dcf8d",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.Int32",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": 3354.674356973491,
+        "y": 545.444881699542
+      },
+      "Name": "Value-IntValue",
+      "Properties": {
+        "State": "8889"
+      }
+    },
+    {
+      "Id": "60afef22-6409-4787-bf74-aab398f845ad",
+      "Inputs": [
+        {
+          "Kind": "System.Int32",
+          "Name": "min"
+        },
+        {
+          "Kind": "System.Int32",
+          "Name": "max"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "System.Collections.Generic.IEnumerable\u00601[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+          "Name": "range"
+        }
+      ],
+      "Pos": {
+        "x": 3775.678578563022,
+        "y": 196.49837625128905
+      },
+      "Name": "Unity-IntRange",
+      "Properties": {}
+    },
+    {
+      "Id": "c8bd67ea-9beb-4781-888f-4ab460987a1a",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.Int32",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": 3290.7964969632685,
+        "y": 192.44932331698746
+      },
+      "Name": "Value-IntValue",
+      "Properties": {
+        "State": "117798"
+      }
+    },
+    {
+      "Id": "89ce21e2-1f6a-4513-bc89-28365c366231",
+      "Inputs": [
+        {
+          "Kind": "EmbedIOOperations.EmbedIOOps\u002BServerFuture",
+          "Name": "server"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "IVE.RunningASyncTask",
+          "Name": "running"
+        }
+      ],
+      "Pos": {
+        "x": 287.6672763529809,
+        "y": -1256.3365942812018
+      },
+      "Name": "EmbedIOOps-Run",
+      "Properties": {}
+    },
+    {
+      "Id": "bbbbe767-1ec9-4395-9c2e-452addeea750",
+      "Inputs": [
+        {
+          "Kind": "System.Func\u00602[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+          "Name": "IntToStringGenerator"
+        },
+        {
+          "Kind": "System.Collections.Generic.IEnumerable\u00601[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+          "Name": "frame_range"
+        },
+        {
+          "Kind": "System.Action\u00601[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+          "Name": "on_each_pose"
+        }
+      ],
+      "Outputs": [],
+      "Pos": {
+        "x": 4350.113134945383,
+        "y": 314.26700129799235
+      },
+      "Name": "Unity-ForEachIntSendString",
+      "Properties": {}
+    },
+    {
+      "Id": "609e5085-e8b8-49e0-8872-d150e5711708",
+      "Inputs": [
+        {
+          "Kind": "IVEAutoCam.StaticMethods\u002BPoseFunc",
+          "Name": "posefunc"
+        },
+        {
+          "Kind": "AutoCam.CameraParameters",
+          "Name": "camera"
+        },
+        {
+          "Kind": "System.String",
+          "Name": "video_file"
+        },
+        {
+          "Kind": "System.Int32",
+          "Name": "video_offset"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "System.Func\u00602[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+          "Name": "FrameToString"
+        }
+      ],
+      "Pos": {
+        "x": 3855.7162941857737,
+        "y": -12.05296316041145
+      },
+      "Name": "AutoCam-IntToPoseStringGenerator",
+      "Properties": {}
+    },
+    {
+      "Id": "e01942f8-81fc-4ac9-9569-03f87475761e",
+      "Inputs": [
+        {
+          "Kind": "AutoCam.CameraParameters",
+          "Name": "camera_parameters"
+        },
+        {
+          "Kind": "IVEAutoCam.StaticMethods\u002BFrameContentFunc",
+          "Name": "video_content"
+        },
+        {
+          "Kind": "IVEAutoCam.StaticMethods\u002BAutoCamParams",
+          "Name": "autocam_parameters"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "IVEAutoCam.StaticMethods\u002BPoseFunc",
+          "Name": "pose_func"
+        }
+      ],
+      "Pos": {
+        "x": 2962.1321016159113,
+        "y": -972.8976727155207
+      },
+      "Name": "Unity-AugheyAutoCamFuncNEW",
+      "Properties": {}
+    },
+    {
+      "Id": "f4ac437b-34d1-4075-bff6-ba58787b9b9c",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.String",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": -785.970122912349,
+        "y": -1266.500123019351
+      },
+      "Name": "Value-StringValue",
+      "Properties": {
+        "State": "http://*:9999"
+      }
+    },
+    {
+      "Id": "d213d21c-5614-4d74-af45-c8bf70f3373f",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.String",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": -629.8406266576085,
+        "y": 666.8495959436639
+      },
+      "Name": "Value-StringValue",
+      "Properties": {
+        "State": ".txt"
+      }
+    },
+    {
+      "Id": "af5c1bdd-a986-4fcc-bc39-c3bb7d77ed77",
+      "Inputs": [
+        {
+          "Kind": "IVEAutoCam.StaticMethods\u002BPoseFunc",
+          "Name": "original"
+        },
+        {
+          "Kind": "IVEAutoCam.StaticMethods\u002BPoseFunc",
+          "Name": "over_ride"
+        },
+        {
+          "Kind": "System.String",
+          "Name": "properties"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "IVEAutoCam.StaticMethods\u002BPoseFunc",
+          "Name": "newfunc"
+        }
+      ],
+      "Pos": {
+        "x": 3601.9880442391695,
+        "y": -1267.6719770257505
+      },
+      "Name": "AutoCam-OverridePoseProperties",
+      "Properties": {}
+    },
+    {
+      "Id": "1db5693e-3975-4c47-a56c-e911c16c704e",
+      "Inputs": [
+        {
+          "Kind": "IVEAutoCam.StaticMethods\u002BPoseFunc",
+          "Name": "pose_func"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "IVEAutoCam.StaticMethods\u002BPoseFunc",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": 3395.6349143777334,
+        "y": -994.2029639969917
+      },
+      "Name": "AutoCam-PoseFuncCopy",
+      "Properties": {}
+    },
+    {
+      "Id": "251be58a-ad8e-467a-8b1a-b17c110df0b7",
+      "Inputs": [
+        {
+          "Kind": "AutoCam.CameraParameters",
+          "Name": "camera_parameters"
+        },
+        {
+          "Kind": "IVEAutoCam.StaticMethods\u002BFrameContentFunc",
+          "Name": "video_content"
+        },
+        {
+          "Kind": "IVEAutoCam.StaticMethods\u002BAutoCamParams",
+          "Name": "autocam_parameters"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "IVEAutoCam.StaticMethods\u002BPoseFunc",
+          "Name": "pose_func"
+        }
+      ],
+      "Pos": {
+        "x": 3105.3206702462926,
+        "y": -1295.371377264511
+      },
+      "Name": "Unity-AugheyAutoCamFuncNEW",
+      "Properties": {}
+    },
+    {
+      "Id": "181cd1f7-8349-4a36-868e-9e03e169a208",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.String",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": 3294.4485643295416,
+        "y": -1115.4622516151987
+      },
+      "Name": "Value-StringValue",
+      "Properties": {
+        "State": "vfov"
+      }
+    },
+    {
+      "Id": "8b6c2599-7ceb-4229-beef-6673bc5fce29",
+      "Inputs": [
+        {
+          "Kind": "System.Int32",
+          "Name": "pre_frames"
+        },
+        {
+          "Kind": "System.Int32",
+          "Name": "post_frames"
+        },
+        {
+          "Kind": "System.Int32",
+          "Name": "keyframe_interval"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "IVEAutoCam.StaticMethods\u002BAutoCamParams",
+          "Name": "parameters"
+        }
+      ],
+      "Pos": {
+        "x": 2749.785500925261,
+        "y": -1676.8210825407923
+      },
+      "Name": "AutoCam-CreateAutocamParameters",
+      "Properties": {}
+    },
+    {
+      "Id": "f818a78a-0cf2-4f2d-9aa8-4506323bf999",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.Int32",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": 2456.983091281788,
+        "y": -1779.8701976246964
+      },
+      "Name": "Value-IntValue",
+      "Properties": {
+        "State": "30"
+      }
+    },
+    {
+      "Id": "38f72e0e-c24f-4f06-9410-e4c5f893395c",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.Int32",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": 2420.2695412399794,
+        "y": -1685.7658931088379
+      },
+      "Name": "Value-IntValue",
+      "Properties": {
+        "State": "60"
+      }
+    },
+    {
+      "Id": "dbb7895e-bf35-44af-8a6a-ebe4495f8169",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.Int32",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": 2488.0780590046484,
+        "y": -1583.2667826534835
+      },
+      "Name": "Value-IntValue",
+      "Properties": {
+        "State": "2"
+      }
+    },
+    {
+      "Id": "ce1255d9-9b38-4ed9-8e39-0ac8d4391ad7",
+      "Inputs": [
+        {
+          "Kind": "System.String",
+          "Name": "path"
+        },
+        {
+          "Kind": "System.String",
+          "Name": "extension"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "System.Int32",
+          "Name": "count"
+        }
+      ],
+      "Pos": {
+        "x": -322.36879408409845,
+        "y": 723.9199809198175
+      },
+      "Name": "AutoCam-LargestNumber",
+      "Properties": {}
+    },
+    {
+      "Id": "415000f8-8276-43fb-8f16-baa5d799889a",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.String",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": -585.3835610045077,
+        "y": -1089.654722975542
+      },
+      "Name": "Value-StringValue",
+      "Properties": {
+        "State": "/api"
+      }
+    },
+    {
+      "Id": "3068ce7f-f7b2-4fe8-be60-3d0435f8de71",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "EmbedIO.RequestHandlerCallback",
+          "Name": "handler"
+        },
+        {
+          "Kind": "System.Collections.Generic.Dictionary\u00602[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[EmbedIO.RequestHandlerCallback, EmbedIO, Version=3.4.3.0, Culture=neutral, PublicKeyToken=5e5f048b6e04267e]]",
+          "Name": "routes"
+        }
+      ],
+      "Pos": {
+        "x": -589.1150260254702,
+        "y": -951.430732136703
+      },
+      "Name": "EmbedIOOps-RoutedRequesthandler",
+      "Properties": {}
+    },
+    {
+      "Id": "81b60d49-8ff0-4031-811a-7ee24dfe328a",
+      "Inputs": [
+        {
+          "Kind": "System.Collections.Generic.Dictionary\u00602[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[EmbedIO.RequestHandlerCallback, EmbedIO, Version=3.4.3.0, Culture=neutral, PublicKeyToken=5e5f048b6e04267e]]",
+          "Name": "routes"
+        },
+        {
+          "Kind": "System.String",
+          "Name": "path"
+        },
+        {
+          "Kind": "EmbedIO.RequestHandlerCallback",
+          "Name": "handler"
+        }
+      ],
+      "Outputs": [],
+      "Pos": {
+        "x": 103.65734109612528,
+        "y": -918.429249245468
+      },
+      "Name": "EmbedIOOps-AddRouteHandler",
+      "Properties": {}
+    },
+    {
+      "Id": "b3547c18-2fe0-4fe6-88cb-84c5ddb4ba3b",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.String",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": -512.2061540898279,
+        "y": -839.6319160170536
+      },
+      "Name": "Value-StringValue",
+      "Properties": {
+        "State": "/frame"
+      }
+    },
+    {
+      "Id": "7331b2dd-c33e-4998-b65b-2283171e2a13",
+      "Inputs": [
+        {
+          "Kind": "EnumBehavior.IAsyncDataSink\u00601[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+          "Name": "sink"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "EmbedIO.RequestHandlerCallback",
+          "Name": "handler"
+        }
+      ],
+      "Pos": {
+        "x": -421.9776430407489,
+        "y": -738.1403840752985
+      },
+      "Name": "EmbedIOOps-PostRequestHandler",
+      "Properties": {}
+    },
+    {
+      "Id": "d59341b1-3566-47d0-a462-d8ebaeedf4ce",
+      "Inputs": [
+        {
+          "Kind": "EmbedIOOperations.EmbedIOOps\u002BServerFuture",
+          "Name": "server"
+        },
+        {
+          "Kind": "System.String",
+          "Name": "actionpath"
+        },
+        {
+          "Kind": "EmbedIO.RequestHandlerCallback",
+          "Name": "handler"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "EmbedIOOperations.EmbedIOOps\u002BServerFuture",
+          "Name": "serverout"
+        }
+      ],
+      "Pos": {
+        "x": -20.123221882898385,
+        "y": -1090.43868431086
+      },
+      "Name": "EmbedIOOps-PostActionHandler",
+      "Properties": {}
+    },
+    {
+      "Id": "400c6c7a-547c-4ed2-acb2-7b4c44a23d45",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "EnumBehavior.IAsyncDataSource\u00601[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+          "Name": "source"
+        },
+        {
+          "Kind": "EnumBehavior.IAsyncDataSink\u00601[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+          "Name": "sink"
+        }
+      ],
+      "Pos": {
+        "x": -1052.7054179182928,
+        "y": -714.0997640821331
+      },
+      "Name": "EnumOps-AsyncStringSourceSink",
+      "Properties": {}
+    },
+    {
+      "Id": "bda8fba3-9ad5-4a89-b7ef-d895ef8a0eb8",
+      "Inputs": [
+        {
+          "Kind": "EnumOps.ASyncDataSourceConsumer\u00601\u002BDataValue[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+          "Name": "datavalue"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "System.String",
+          "Name": "value"
+        }
+      ],
+      "Pos": {
+        "x": -112.33727179371672,
+        "y": -634.5106572885909
+      },
+      "Name": "EnumOps-AsyncStringReader",
+      "Properties": {}
+    },
+    {
+      "Id": "b36f13ef-9c26-44b9-9630-c77b230d57d9",
+      "Inputs": [
+        {
+          "Kind": "System.String",
+          "Name": "str"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "System.Int32",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": 286.51160185699877,
+        "y": -717.335932745137
+      },
+      "Name": "StringToInt",
+      "Properties": {}
+    },
+    {
+      "Id": "e183597d-0764-4a00-be8d-3c16d3e9ee9a",
+      "Inputs": [
+        {
+          "Kind": "EmbedIOOperations.EmbedIOOps\u002BServerFuture",
+          "Name": "server"
+        },
+        {
+          "Kind": "System.String",
+          "Name": "actionpath"
+        },
+        {
+          "Kind": "EmbedIO.RequestHandlerCallback",
+          "Name": "handler"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "EmbedIOOperations.EmbedIOOps\u002BServerFuture",
+          "Name": "serverout"
+        }
+      ],
+      "Pos": {
+        "x": -606.2089248495582,
+        "y": -452.9046102512859
+      },
+      "Name": "EmbedIOOps-GetActionHandler",
+      "Properties": {}
+    },
+    {
+      "Id": "6ab54a04-3aab-4935-a550-a89332e54c08",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.String",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": -905.2433441209484,
+        "y": -438.46209077420815
+      },
+      "Name": "Value-StringValue",
+      "Properties": {
+        "State": "/count"
+      }
+    },
+    {
+      "Id": "100d6f44-ced7-41f0-be01-e56cae73efa3",
+      "Inputs": [
+        {
+          "Kind": "System.Object",
+          "Name": "data"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "EmbedIO.RequestHandlerCallback",
+          "Name": "handler"
+        }
+      ],
+      "Pos": {
+        "x": -890.8008246438708,
+        "y": -98.03127452880452
+      },
+      "Name": "EmbedIOOps-SimpleRequestHandler",
+      "Properties": {}
+    },
+    {
+      "Id": "30992cb7-60d2-4173-b8ad-9f9a4fa04acf",
+      "Inputs": [
+        {
+          "Kind": "EnumBehavior.IAsyncDataSource\u00601[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+          "Name": "source"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "IVE.OneTimeDisposable",
+          "Name": "disposable_"
+        },
+        {
+          "Kind": "EnumOps.ASyncDataSourceConsumer\u00601\u002BDataValue[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+          "Name": "optionalvalue"
+        }
+      ],
+      "Pos": {
+        "x": -542.7267914592337,
+        "y": -630.321756931036
+      },
+      "Name": "EnumOps-AsyncStringConsumerLastValue",
+      "Properties": {}
+    },
+    {
+      "Id": "a287f869-68f1-4003-852e-41b039d586ca",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.Double",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": -530.3802835027153,
+        "y": 1775.0270807490247
+      },
+      "Name": "Value-DoubleValue",
+      "Properties": {
+        "State": "0.8"
+      }
+    },
+    {
+      "Id": "16fdca57-bcc4-4f63-a4d7-5ceea7706efd",
+      "Inputs": [
+        {
+          "Kind": "IVEAutoCam.StaticMethods\u002BDetectionsFunc",
+          "Name": "detections_func"
+        },
+        {
+          "Kind": "System.Int32",
+          "Name": "frame"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "System.Collections.Generic.IEnumerable\u00601[[AutoCam.Detection, AutoCamLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+          "Name": "detections"
+        }
+      ],
+      "Pos": {
+        "x": 669.9681080711015,
+        "y": 1163.3532314187778
+      },
+      "Name": "AutoCam-DetectionsComputer",
+      "Properties": {}
+    },
+    {
+      "Id": "1e20a464-6876-45f6-bdda-2e21f2eea627",
+      "Inputs": [
+        {
+          "Kind": "AutoCam.IVideoContent",
+          "Name": "content"
+        },
+        {
+          "Kind": "System.Int32",
+          "Name": "yolosize"
+        },
+        {
+          "Kind": "System.Int32",
+          "Name": "width"
+        },
+        {
+          "Kind": "System.Int32",
+          "Name": "height"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "AutoCam.IVideoContent",
+          "Name": "gridcontent"
+        }
+      ],
+      "Pos": {
+        "x": -93.02693349487564,
+        "y": 1191.8764841113664
+      },
+      "Name": "AutoCam-VideoContentFromGridded",
+      "Properties": {}
+    },
+    {
+      "Id": "3efd279c-73f0-4080-9eac-aef2a66b4e51",
+      "Inputs": [
+        {
+          "Kind": "System.Double",
+          "Name": "y"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "IVEAutoCam.StaticMethods\u002BDetectionFilter",
+          "Name": "filter"
+        }
+      ],
+      "Pos": {
+        "x": -199.55497741112214,
+        "y": 1714.0305522812669
+      },
+      "Name": "AutoCam-DetectionYLessThanFunc",
+      "Properties": {}
+    },
+    {
+      "Id": "a4e45162-5483-4332-b664-ae8521ef371f",
+      "Inputs": [
+        {
+          "Kind": "IVEAutoCam.StaticMethods\u002BFrameContentFunc",
+          "Name": "contentfunc"
+        },
+        {
+          "Kind": "IVEAutoCam.StaticMethods\u002BDetectionFilter",
+          "Name": "wherepredicate"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "IVEAutoCam.StaticMethods\u002BFrameContentFunc",
+          "Name": "filteredcontent"
+        }
+      ],
+      "Pos": {
+        "x": 628.2992305202131,
+        "y": 1676.1457275302635
+      },
+      "Name": "AutoCam-FilteredFrameContentFunc",
+      "Properties": {}
+    },
+    {
+      "Id": "5a73bae6-f71b-4630-b7d4-ebe90d226bda",
+      "Inputs": [
+        {
+          "Kind": "AutoCam.IVideoContent",
+          "Name": "content"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "IVEAutoCam.StaticMethods\u002BFrameContentFunc",
+          "Name": "func"
+        }
+      ],
+      "Pos": {
+        "x": 360.7534294812922,
+        "y": 1526.4483758757071
+      },
+      "Name": "AutoCam-IVideoContentToFrameContentFunc",
+      "Properties": {}
+    },
+    {
+      "Id": "49e11e25-6796-4266-858c-e4af19245abe",
+      "Inputs": [
+        {
+          "Kind": "System.Int32",
+          "Name": "numerator"
+        },
+        {
+          "Kind": "System.Int32",
+          "Name": "denominator"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "System.Int32",
+          "Name": "result"
+        }
+      ],
+      "Pos": {
+        "x": -82.03613027298441,
+        "y": 842.2291280990854
+      },
+      "Name": "IntDivide",
+      "Properties": {}
+    },
+    {
+      "Id": "f09485f1-6a89-43ad-8f28-1c4354f1776e",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.Int32",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": -539.1650667220102,
+        "y": 886.9319830554587
+      },
+      "Name": "Value-IntValue",
+      "Properties": {
+        "State": "2"
+      }
+    },
+    {
+      "Id": "5816419b-a9f1-4c73-836c-bc9025a12735",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.Int32",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": -397.4792284324304,
+        "y": 1176.4714426649284
+      },
+      "Name": "Value-IntValue",
+      "Properties": {
+        "State": "1280"
+      }
+    },
+    {
+      "Id": "31893c86-102d-4cf2-85af-769b6b5a1b99",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.Int32",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": -325.7898284539146,
+        "y": 1271.2610339000666
+      },
+      "Name": "Value-IntValue",
+      "Properties": {
+        "State": "2428"
+      }
+    },
+    {
+      "Id": "ced73579-6c5b-4dc0-899f-94ab4cfcaa7f",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.Int32",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": -296.53544155280883,
+        "y": 1394.0597914014534
+      },
+      "Name": "Value-IntValue",
+      "Properties": {
+        "State": "1280"
+      }
+    },
+    {
+      "Id": "7f9aeee7-8c65-4b40-aaef-d586563b307b",
+      "Inputs": [
+        {
+          "Kind": "AutoCam.IVideoContent",
+          "Name": "slow"
+        },
+        {
+          "Kind": "LevelDBStore.LevelDBPackage",
+          "Name": "db"
+        },
+        {
+          "Kind": "System.String",
+          "Name": "keyprefix"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "AutoCam.IVideoContent",
+          "Name": "cache"
+        }
+      ],
+      "Pos": {
+        "x": 325.16384854016763,
+        "y": 1055.019467675119
+      },
+      "Name": "LevelDB-CreateLevelDBVideoCache",
+      "Properties": {}
+    },
+    {
+      "Id": "0ae067ea-e917-4a89-a0ff-58af67b1d053",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.String",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": -73.33245514179274,
+        "y": 1387.316443845807
+      },
+      "Name": "Value-StringValue",
+      "Properties": {
+        "State": "fileread"
+      }
+    },
+    {
+      "Id": "d6c03c5f-464a-40c7-a947-3ea83efe918c",
+      "Inputs": [
+        {
+          "Kind": "System.Collections.Generic.Dictionary\u00602[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[EmbedIO.RequestHandlerCallback, EmbedIO, Version=3.4.3.0, Culture=neutral, PublicKeyToken=5e5f048b6e04267e]]",
+          "Name": "routes"
+        },
+        {
+          "Kind": "System.String",
+          "Name": "path"
+        },
+        {
+          "Kind": "EmbedIO.RequestHandlerCallback",
+          "Name": "handler"
+        }
+      ],
+      "Outputs": [],
+      "Pos": {
+        "x": 254.73111512223392,
+        "y": -1638.172550874465
+      },
+      "Name": "EmbedIOOps-AddRouteHandler",
+      "Properties": {}
+    },
+    {
+      "Id": "5c537a57-f9d9-4ba9-8313-4ad28a64627c",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.String",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": 54.731115122233916,
+        "y": -1638.172550874465
+      },
+      "Name": "Value-StringValue",
+      "Properties": {
+        "State": "/keyframes"
+      }
+    },
+    {
+      "Id": "02b2e210-d72e-43ce-8766-82484c9096d1",
+      "Inputs": [
+        {
+          "Kind": "EnumBehavior.IAsyncDataSink\u00601[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+          "Name": "sink"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "EmbedIO.RequestHandlerCallback",
+          "Name": "handler"
+        }
+      ],
+      "Pos": {
+        "x": -101.30026945382058,
+        "y": -1498.3944355250828
+      },
+      "Name": "EmbedIOOps-PostRequestHandler",
+      "Properties": {}
+    },
+    {
+      "Id": "a11b3ff6-9a96-4516-bfc9-5bd67ad0fecd",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "EnumBehavior.IAsyncDataSource\u00601[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+          "Name": "source"
+        },
+        {
+          "Kind": "EnumBehavior.IAsyncDataSink\u00601[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+          "Name": "sink"
+        }
+      ],
+      "Pos": {
+        "x": -475.21025017921465,
+        "y": -1462.6372432264038
+      },
+      "Name": "EnumOps-AsyncStringSourceSink",
+      "Properties": {}
+    },
+    {
+      "Id": "911a122f-027d-4e06-ac3a-882f77cb4326",
+      "Inputs": [
+        {
+          "Kind": "EnumBehavior.IAsyncDataSource\u00601[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+          "Name": "source"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "IVE.OneTimeDisposable",
+          "Name": "disposable_"
+        },
+        {
+          "Kind": "EnumOps.ASyncDataSourceConsumer\u00601\u002BDataValue[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+          "Name": "optionalvalue"
+        }
+      ],
+      "Pos": {
+        "x": -80.15757263426087,
+        "y": -1428.9463261959115
+      },
+      "Name": "EnumOps-AsyncStringConsumerLastValue",
+      "Properties": {}
+    },
+    {
+      "Id": "e0a69d9e-a1a9-4352-9cf4-0328c06f6904",
+      "Inputs": [
+        {
+          "Kind": "EnumOps.ASyncDataSourceConsumer\u00601\u002BDataValue[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+          "Name": "datavalue"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "System.String",
+          "Name": "value"
+        }
+      ],
+      "Pos": {
+        "x": 414.1946498426694,
+        "y": -1441.3587693124086
+      },
+      "Name": "EnumOps-AsyncStringReader",
+      "Properties": {}
+    },
+    {
+      "Id": "8b0a4441-588c-4611-b8ee-5cd847bbcc0f",
+      "Inputs": [
+        {
+          "Kind": "System.String",
+          "Name": "str"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "IVEAutoCam.StaticMethods\u002BAutoCamParams",
+          "Name": "parameters"
+        }
+      ],
+      "Pos": {
+        "x": 853.9951850274688,
+        "y": -1463.1593605213286
+      },
+      "Name": "AutoCam-StringToKeyframeParameters",
+      "Properties": {}
+    },
+    {
+      "Id": "b93f8930-573b-4832-932a-ee32e615ade7",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.Single",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": -87.71496524028977,
+        "y": 1041.372142930518
+      },
+      "Name": "Value-FloatValue",
+      "Properties": {
+        "State": "6"
+      }
+    },
+    {
+      "Id": "ceb41f7a-c8de-4e41-a92c-ce9e245ace85",
+      "Inputs": [
+        {
+          "Kind": "AutoCam.IVideoContent",
+          "Name": "content"
+        },
+        {
+          "Kind": "System.Single",
+          "Name": "scale"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "AutoCam.IVideoContent",
+          "Name": "scaledcontent"
+        }
+      ],
+      "Pos": {
+        "x": -147.67500849431846,
+        "y": 1536.9321597023275
+      },
+      "Name": "AutoCam-TimeScaledVideoContent",
+      "Properties": {}
+    },
+    {
+      "Id": "94437deb-11d5-46f5-bbe3-f10ffc19724d",
+      "Inputs": [
+        {
+          "Kind": "System.Int32",
+          "Name": "a"
+        },
+        {
+          "Kind": "System.Int32",
+          "Name": "b"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "System.Int32",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": -117.22759903343746,
+        "y": 934.5635565754116
+      },
+      "Name": "IntMultiply",
+      "Properties": {}
+    },
+    {
+      "Id": "61df477f-45bc-46ab-9deb-eebea23386f9",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.Int32",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": -708.8752594449019,
+        "y": 1062.1287945380027
+      },
+      "Name": "Value-IntValue",
+      "Properties": {
+        "State": "5"
+      }
+    },
+    {
+      "Id": "3007119a-25e4-4edb-9409-b9f71b3df4e1",
+      "Inputs": [
+        {
+          "Kind": "System.Double",
+          "Name": "input"
+        },
+        {
+          "Kind": "System.Double",
+          "Name": "divisor"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "System.Double",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": 1013.874344850034,
+        "y": 890.372652589049
+      },
+      "Name": "DoubleDivide",
+      "Properties": {}
+    },
+    {
+      "Id": "a04d2d32-7b20-4a79-bac3-636c1d377ea7",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.Double",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": 812.2434938249032,
+        "y": 889.0149576498634
+      },
+      "Name": "Value-DoubleValue",
+      "Properties": {
+        "State": "4096"
+      }
+    },
+    {
+      "Id": "289d82fc-823a-4987-9259-7b02c8e1a3d5",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.Double",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": 800.2973954581774,
+        "y": 969.1189590618173
+      },
+      "Name": "Value-DoubleValue",
+      "Properties": {
+        "State": "2160"
+      }
+    },
+    {
+      "Id": "05fc5c06-7cf0-4491-97c6-cc4b451cf19c",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.Int32",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": 3408.0907368537187,
+        "y": 296.8054615158496
+      },
+      "Name": "Value-IntValue",
+      "Properties": {
+        "State": "0"
+      }
+    },
+    {
+      "Id": "1f9e12c9-701b-421b-a75c-397f610dd202",
+      "Inputs": [
+        {
+          "Kind": "System.Collections.Generic.Dictionary\u00602[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[EmbedIO.RequestHandlerCallback, EmbedIO, Version=3.4.3.0, Culture=neutral, PublicKeyToken=5e5f048b6e04267e]]",
+          "Name": "routes"
+        },
+        {
+          "Kind": "System.String",
+          "Name": "path"
+        },
+        {
+          "Kind": "EmbedIO.RequestHandlerCallback",
+          "Name": "handler"
+        }
+      ],
+      "Outputs": [],
+      "Pos": {
+        "x": 932.841837798449,
+        "y": -2415.150258458802
+      },
+      "Name": "EmbedIOOps-AddRouteHandler",
+      "Properties": {}
+    },
+    {
+      "Id": "a2cda8f5-9dea-4b58-b433-75c3839fe9c7",
+      "Inputs": [
+        {
+          "Kind": "EnumBehavior.IAsyncDataSink\u00601[[EmbedIOOperations.EmbedIOOps\u002BGraphHttpRequest, EmbedIOOps, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+          "Name": "queue"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "EmbedIO.RequestHandlerCallback",
+          "Name": "handler"
+        }
+      ],
+      "Pos": {
+        "x": 560.0716066238718,
+        "y": -2243.4083779054913
+      },
+      "Name": "EmbedIOOps-GraphSynchronousHandler",
+      "Properties": {}
+    },
+    {
+      "Id": "5f908c47-7fcf-40e4-849a-025b1743aeb1",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.String",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": 115.55936316306673,
+        "y": -2434.334350972159
+      },
+      "Name": "Value-StringValue",
+      "Properties": {
+        "State": "/content"
+      }
+    },
+    {
+      "Id": "32ab8e91-efe1-47b5-9be4-e42e3a37f62d",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "EnumBehavior.IAsyncDataSource\u00601[[EmbedIOOperations.EmbedIOOps\u002BGraphHttpRequest, EmbedIOOps, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+          "Name": "source"
+        },
+        {
+          "Kind": "EnumBehavior.IAsyncDataSink\u00601[[EmbedIOOperations.EmbedIOOps\u002BGraphHttpRequest, EmbedIOOps, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+          "Name": "sink"
+        }
+      ],
+      "Pos": {
+        "x": 25.20116853379068,
+        "y": -2230.2383432069773
+      },
+      "Name": "EnumOps-AsyncGraphHttpRequestSourceSink",
+      "Properties": {}
+    },
+    {
+      "Id": "170ecbe8-3bb8-42e1-bd68-ec5411df031a",
+      "Inputs": [
+        {
+          "Kind": "EnumBehavior.IAsyncDataSource\u00601[[EmbedIOOperations.EmbedIOOps\u002BGraphHttpRequest, EmbedIOOps, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+          "Name": "source"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "IVE.OneTimeDisposable",
+          "Name": "disposable_"
+        },
+        {
+          "Kind": "EnumOps.ASyncDataSourceConsumer\u00601\u002BDataValue[[EmbedIOOperations.EmbedIOOps\u002BGraphHttpRequest, EmbedIOOps, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+          "Name": "optionalvalue"
+        }
+      ],
+      "Pos": {
+        "x": 445.30416139396533,
+        "y": -2138.0481003173795
+      },
+      "Name": "EnumOps-AsyncGraphHttpRequestConsumer",
+      "Properties": {}
+    },
+    {
+      "Id": "32e667ec-7d91-46b4-827f-08f8ad2f51a0",
+      "Inputs": [
+        {
+          "Kind": "EnumOps.ASyncDataSourceConsumer\u00601\u002BDataValue[[EmbedIOOperations.EmbedIOOps\u002BGraphHttpRequest, EmbedIOOps, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+          "Name": "datavalue"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "EmbedIOOperations.EmbedIOOps\u002BGraphHttpRequest",
+          "Name": "value"
+        }
+      ],
+      "Pos": {
+        "x": 889.8905200806512,
+        "y": -2102.300863278556
+      },
+      "Name": "EnumOps-AsyncGraphHttpRequestReader",
+      "Properties": {}
+    },
+    {
+      "Id": "e11ef7c6-cd8f-4a86-ac79-cf5405ee079e",
+      "Inputs": [
+        {
+          "Kind": "EmbedIOOperations.EmbedIOOps\u002BGraphHttpRequest",
+          "Name": "request"
+        },
+        {
+          "Kind": "System.Func\u00602[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+          "Name": "handler"
+        }
+      ],
+      "Outputs": [],
+      "Pos": {
+        "x": 1469.8610599608812,
+        "y": -2121.765075714865
+      },
+      "Name": "EmbedIOOps-SyncFunctionRequestHandler",
+      "Properties": {}
+    },
+    {
+      "Id": "b131f5a0-acea-4ba5-89fd-83501395b389",
+      "Inputs": [
+        {
+          "Kind": "IVEAutoCam.StaticMethods\u002BFrameContentFunc",
+          "Name": "content"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "System.Func\u00602[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+          "Name": "handler"
+        }
+      ],
+      "Pos": {
+        "x": 1144.6434956821693,
+        "y": -1961.9708343455159
+      },
+      "Name": "AutoCam-FrameContentRequest",
+      "Properties": {}
+    },
+    {
+      "Id": "9c38bbe4-9f69-4a91-8ad1-d870e50d62e7",
+      "Inputs": [
+        {
+          "Kind": "IVEAutoCam.StaticMethods\u002BFrameContentFunc",
+          "Name": "infunc"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "IVEAutoCam.StaticMethods\u002BFrameContentFunc",
+          "Name": "outfunc"
+        }
+      ],
+      "Pos": {
+        "x": 2096.73392735911,
+        "y": -937.4751125053156
+      },
+      "Name": "AutoCam-FrameContentFuncCopy",
+      "Properties": {}
+    },
+    {
+      "Id": "0ca429f6-0386-4689-a5e7-9dd837d88651",
+      "Inputs": [
+        {
+          "Kind": "System.Collections.Generic.Dictionary\u00602[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[EmbedIO.RequestHandlerCallback, EmbedIO, Version=3.4.3.0, Culture=neutral, PublicKeyToken=5e5f048b6e04267e]]",
+          "Name": "routes"
+        },
+        {
+          "Kind": "System.String",
+          "Name": "path"
+        },
+        {
+          "Kind": "EmbedIO.RequestHandlerCallback",
+          "Name": "handler"
+        }
+      ],
+      "Outputs": [],
+      "Pos": {
+        "x": 86.76670956389832,
+        "y": -1978.0520044193856
+      },
+      "Name": "EmbedIOOps-AddRouteHandler",
+      "Properties": {}
+    },
+    {
+      "Id": "4b7db291-09de-43dd-b8f3-49c2e1b7f631",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.String",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": -113.23329043610168,
+        "y": -1978.0520044193856
+      },
+      "Name": "Value-StringValue",
+      "Properties": {
+        "State": "/fovkeyframes"
+      }
+    },
+    {
+      "Id": "bfc19f5f-6710-41a2-b47a-8c6465b93239",
+      "Inputs": [
+        {
+          "Kind": "EnumBehavior.IAsyncDataSink\u00601[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+          "Name": "sink"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "EmbedIO.RequestHandlerCallback",
+          "Name": "handler"
+        }
+      ],
+      "Pos": {
+        "x": -244.75857098402616,
+        "y": -1863.682195247277
+      },
+      "Name": "EmbedIOOps-PostRequestHandler",
+      "Properties": {}
+    },
+    {
+      "Id": "6a599932-37c7-4496-a5be-1254d65a9dde",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "EnumBehavior.IAsyncDataSource\u00601[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+          "Name": "source"
+        },
+        {
+          "Kind": "EnumBehavior.IAsyncDataSink\u00601[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+          "Name": "sink"
+        }
+      ],
+      "Pos": {
+        "x": -612.5009577697849,
+        "y": -1814.1219446060302
+      },
+      "Name": "EnumOps-AsyncStringSourceSink",
+      "Properties": {}
+    },
+    {
+      "Id": "e5e8c8c5-4685-4cc6-8666-9c058abdaf93",
+      "Inputs": [
+        {
+          "Kind": "EnumBehavior.IAsyncDataSource\u00601[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+          "Name": "source"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "IVE.OneTimeDisposable",
+          "Name": "disposable_"
+        },
+        {
+          "Kind": "EnumOps.ASyncDataSourceConsumer\u00601\u002BDataValue[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+          "Name": "optionalvalue"
+        }
+      ],
+      "Pos": {
+        "x": -234.07456436670824,
+        "y": -1776.2063360078762
+      },
+      "Name": "EnumOps-AsyncStringConsumerLastValue",
+      "Properties": {}
+    },
+    {
+      "Id": "a4f013f6-888e-4d9d-963f-81de83660bd7",
+      "Inputs": [
+        {
+          "Kind": "EnumOps.ASyncDataSourceConsumer\u00601\u002BDataValue[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+          "Name": "datavalue"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "System.String",
+          "Name": "value"
+        }
+      ],
+      "Pos": {
+        "x": 241.1905922033467,
+        "y": -1795.868132905737
+      },
+      "Name": "EnumOps-AsyncStringReader",
+      "Properties": {}
+    },
+    {
+      "Id": "d6281409-daa8-4886-a318-4907bd83967a",
+      "Inputs": [
+        {
+          "Kind": "System.String",
+          "Name": "str"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "IVEAutoCam.StaticMethods\u002BAutoCamParams",
+          "Name": "parameters"
+        }
+      ],
+      "Pos": {
+        "x": 832.9036553816853,
+        "y": -1710.5699164452199
+      },
+      "Name": "AutoCam-StringToKeyframeParameters",
+      "Properties": {}
+    },
+    {
+      "Id": "992bf92e-3cbe-4196-aec5-88bba4de92de",
+      "Inputs": [
+        {
+          "Kind": "System.Int32",
+          "Name": "min"
+        },
+        {
+          "Kind": "System.Int32",
+          "Name": "max"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "System.Collections.Generic.IEnumerable\u00601[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+          "Name": "range"
+        }
+      ],
+      "Pos": {
+        "x": 3773.9862097906216,
+        "y": 303.81606431650823
+      },
+      "Name": "Unity-IntRange",
+      "Properties": {}
+    },
+    {
+      "Id": "4fcc7a1d-81f6-481b-9f6b-164e288a3c2f",
+      "Inputs": [
+        {
+          "Kind": "IVEAutoCam.StaticMethods\u002BDetectionFilter",
+          "Name": "infilter"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "IVEAutoCam.StaticMethods\u002BDetectionFilter",
+          "Name": "outfilter"
+        }
+      ],
+      "Pos": {
+        "x": 200.03114422404443,
+        "y": 1903.1916200507133
+      },
+      "Name": "AutoCam-DetectionNegateFunc",
+      "Properties": {}
+    },
+    {
+      "Id": "0766e5d5-5f35-4dae-969b-ad37b861ca18",
+      "Inputs": [
+        {
+          "Kind": "System.Double",
+          "Name": "y"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "IVEAutoCam.StaticMethods\u002BDetectionFilter",
+          "Name": "filter"
+        }
+      ],
+      "Pos": {
+        "x": -242.14849031988393,
+        "y": 1948.8352670563793
+      },
+      "Name": "AutoCam-DetectionYGreaterThanFunc",
+      "Properties": {}
+    },
+    {
+      "Id": "60c1ef17-2050-473a-b8c6-228dbf58f04e",
+      "Inputs": [
+        {
+          "Kind": "IVEAutoCam.StaticMethods\u002BDetectionFilter",
+          "Name": "filter1"
+        },
+        {
+          "Kind": "IVEAutoCam.StaticMethods\u002BDetectionFilter",
+          "Name": "filter2"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "IVEAutoCam.StaticMethods\u002BDetectionFilter",
+          "Name": "combined"
+        }
+      ],
+      "Pos": {
+        "x": 687.2656934373501,
+        "y": 1910.810055983526
+      },
+      "Name": "AutoCam-DetectionCombineAnd",
+      "Properties": {}
+    },
+    {
+      "Id": "ddfb95a6-1bef-4381-bd71-a57bc1dd1da3",
+      "Inputs": [
+        {
+          "Kind": "System.Double",
+          "Name": "c"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "IVEAutoCam.StaticMethods\u002BDetectionFilter",
+          "Name": "filter"
+        }
+      ],
+      "Pos": {
+        "x": 297.2536467947541,
+        "y": 2046.5329464425229
+      },
+      "Name": "AutoCam-ConfidenceGreaterThanFunc",
+      "Properties": {}
+    },
+    {
+      "Id": "0e415401-1c3b-4900-8705-ba7883f4a151",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.Double",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": 2.247623473456116,
+        "y": 2072.8406866420164
+      },
+      "Name": "Value-DoubleValue",
+      "Properties": {
+        "State": "0.5"
+      }
+    },
+    {
+      "Id": "351d7720-ec77-47f9-bfa3-2a9e396ec11e",
+      "Inputs": [
+        {
+          "Kind": "System.String",
+          "Name": "string1"
+        },
+        {
+          "Kind": "System.String",
+          "Name": "string2"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "System.String",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": 126.66754485820726,
+        "y": 1387.316443845807
+      },
+      "Name": "StringConcat",
+      "Properties": {}
+    },
+    {
+      "Id": "01077eed-d15c-40f4-b24e-93988fd8b84d",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.Double",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": 1295.5616923921664,
+        "y": 1360.6823247716081
+      },
+      "Name": "Value-DoubleValue",
+      "Properties": {
+        "State": "5.73"
+      }
+    },
+    {
+      "Id": "ead082e5-eb16-43df-9ac8-b7e167d91381",
+      "Inputs": [
+        {
+          "Kind": "System.Double",
+          "Name": "degrees"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "System.Double",
+          "Name": "radians"
+        }
+      ],
+      "Pos": {
+        "x": 1669.4638215507682,
+        "y": 1383.0075981095367
+      },
+      "Name": "DegreesToRadians",
+      "Properties": {}
+    },
+    {
+      "Id": "be61a005-2364-4f87-a5e5-cc104d52c825",
+      "Inputs": [
+        {
+          "Kind": "System.Double",
+          "Name": "input"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "System.Double",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": 1869.4638215507682,
+        "y": 1383.0075981095367
+      },
+      "Name": "Tan",
+      "Properties": {}
+    },
+    {
+      "Id": "7c27e644-0665-49f5-8fb1-132ed51e8953",
+      "Inputs": [
+        {
+          "Kind": "System.Double",
+          "Name": "input"
+        },
+        {
+          "Kind": "System.Double",
+          "Name": "divisor"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "System.Double",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": 2105.903277518595,
+        "y": 1270.6526088754056
+      },
+      "Name": "DoubleDivide",
+      "Properties": {}
+    },
+    {
+      "Id": "b6c2597f-7363-4b7a-95d9-ec5c6f5e553f",
+      "Inputs": [
+        {
+          "Kind": "System.String",
+          "Name": "urlprefix"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "EmbedIOOperations.EmbedIOOps\u002BServerFuture",
+          "Name": "server"
+        }
+      ],
+      "Pos": {
+        "x": -1511.1841563543899,
+        "y": -1601.7144659436738
+      },
+      "Name": "EmbedIOOps-CreateServer",
+      "Properties": {}
+    },
+    {
+      "Id": "1089ae6e-11e1-4d7b-988c-3ec604556416",
+      "Inputs": [
+        {
+          "Kind": "EmbedIOOperations.EmbedIOOps\u002BServerFuture",
+          "Name": "server"
+        },
+        {
+          "Kind": "System.String",
+          "Name": "actionpath"
+        },
+        {
+          "Kind": "EmbedIO.RequestHandlerCallback",
+          "Name": "handler"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "EmbedIOOperations.EmbedIOOps\u002BServerFuture",
+          "Name": "serverout"
+        }
+      ],
+      "Pos": {
+        "x": -1222.1170537268054,
+        "y": -1540.589983748273
+      },
+      "Name": "EmbedIOOps-GetActionHandler",
+      "Properties": {}
+    },
+    {
+      "Id": "31fbda85-94b0-4959-986e-5c6cf40e63bc",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.String",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": -1793.352727549755,
+        "y": -1590.7586564509584
+      },
+      "Name": "Value-StringValue",
+      "Properties": {
+        "State": "http://*:9990"
+      }
+    },
+    {
+      "Id": "8f98cd11-9839-41b1-9d5d-c7305635fad2",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.String",
+          "Name": "output"
+        }
+      ],
+      "Pos": {
+        "x": -1850.014996307283,
+        "y": -1432.0606583956687
+      },
+      "Name": "Value-StringValue",
+      "Properties": {
+        "State": "/foo"
+      }
+    },
+    {
+      "Id": "501420b4-7bd9-4040-9d07-deac4e199ec1",
+      "Inputs": [
+        {
+          "Kind": "System.Object",
+          "Name": "data"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "EmbedIO.RequestHandlerCallback",
+          "Name": "handler"
+        }
+      ],
+      "Pos": {
+        "x": -1558.3373283336991,
+        "y": -1285.6135723045995
+      },
+      "Name": "EmbedIOOps-SimpleRequestHandler",
+      "Properties": {}
+    },
+    {
+      "Id": "2248d151-76a1-4b53-8f45-9ec5839fd7b9",
+      "Inputs": [
+        {
+          "Kind": "EmbedIOOperations.EmbedIOOps\u002BServerFuture",
+          "Name": "server"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "IVE.RunningASyncTask",
+          "Name": "running"
+        }
+      ],
+      "Pos": {
+        "x": -884.1503653428999,
+        "y": -1612.192948605743
+      },
+      "Name": "EmbedIOOps-Run",
+      "Properties": {}
+    },
+    {
+      "Id": "a992a3bb-4fa0-4593-b5c7-6e635fce2f33",
+      "Inputs": [
+        {
+          "Kind": "EmbedIOOperations.EmbedIOOps\u002BServerFuture",
+          "Name": "server"
+        },
+        {
+          "Kind": "System.String",
+          "Name": "actionpath"
+        },
+        {
+          "Kind": "EmbedIO.RequestHandlerCallback",
+          "Name": "handler"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "EmbedIOOperations.EmbedIOOps\u002BServerFuture",
+          "Name": "serverout"
+        }
+      ],
+      "Pos": {
+        "x": -1215.9689829750773,
+        "y": -1191.3072283459803
+      },
+      "Name": "EmbedIOOps-PostActionHandler",
+      "Properties": {}
+    },
+    {
+      "Id": "dce60409-02e1-45da-9bab-7b8114de0ee2",
+      "Inputs": [
+        {
+          "Kind": "System.Threading.Channels.Channel\u00601[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+          "Name": "channel"
+        }
+      ],
+      "Outputs": [
+        {
+          "Kind": "EmbedIO.RequestHandlerCallback",
+          "Name": "handler"
+        }
+      ],
+      "Pos": {
+        "x": -1642.9582605789005,
+        "y": -1109.2418741353672
+      },
+      "Name": "EmbedIOOps-PostRequestHandlerChannel",
+      "Properties": {}
+    },
+    {
+      "Id": "00acd598-d3af-4527-b96f-57b9d3ddb418",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Kind": "System.Threading.Channels.Channel\u00601[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+          "Name": "channel"
+        }
+      ],
+      "Pos": {
+        "x": -2104.868965506388,
+        "y": -1060.3518758822358
+      },
+      "Name": "EnumOps-CreateStringChannel",
+      "Properties": {}
+    },
+    {
+      "Id": "309521bb-f266-4ccd-9bcc-2420ba7ce936",
+      "Inputs": [
+        {
+          "Kind": "System.Threading.Channels.Channel\u00601[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+          "Name": "channel"
+        },
+        {
+          "Kind": "EnumOps.ASyncEnumerating\u00601[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+          "Name": "enumerating"
+        }
+      ],
+      "Outputs": [],
+      "Pos": {
+        "x": -1904.8689655063881,
+        "y": -1060.3518758822358
+      },
+      "Name": "EnumOps-StringChannelReader",
+      "Properties": {}
+    }
+  ],
+  "Connections": [
+    {
+      "from": "ad1a6229-db8d-4009-8b30-d3f6c146cf48",
+      "outputname": "output",
+      "to": "e9f83bcb-b57c-4e3a-ba95-2867930208ce",
+      "inputname": "string1"
+    },
+    {
+      "from": "04736444-8be8-4b42-bfe6-65040254c51e",
+      "outputname": "output",
+      "to": "e9f83bcb-b57c-4e3a-ba95-2867930208ce",
+      "inputname": "string2"
+    },
+    {
+      "from": "e9f83bcb-b57c-4e3a-ba95-2867930208ce",
+      "outputname": "output",
+      "to": "a6794b0d-9f01-40de-a82f-d79a0d7759e8",
+      "inputname": "string1"
+    },
+    {
+      "from": "468ded7c-811c-43f1-bd1b-61643e19451d",
+      "outputname": "output",
+      "to": "a6794b0d-9f01-40de-a82f-d79a0d7759e8",
+      "inputname": "string2"
+    },
+    {
+      "from": "a6794b0d-9f01-40de-a82f-d79a0d7759e8",
+      "outputname": "output",
+      "to": "3e1d4801-c17f-4dd1-bb4c-b522c05908c0",
+      "inputname": "string1"
+    },
+    {
+      "from": "0124a7a0-5812-4258-a541-2084e1f7a48d",
+      "outputname": "output",
+      "to": "3e1d4801-c17f-4dd1-bb4c-b522c05908c0",
+      "inputname": "string2"
+    },
+    {
+      "from": "c6c7b44e-fea5-47f0-a7a0-dcf5a35a720f",
+      "outputname": "output",
+      "to": "b44093dd-1b8a-484e-a1da-693c8c551dfd",
+      "inputname": "video_file"
+    },
+    {
+      "from": "c46ba1e4-35eb-4f0f-abcf-305cde4bc9aa",
+      "outputname": "output",
+      "to": "df386e7e-31d7-4c51-a5f7-8de2569412d5",
+      "inputname": "padding"
+    },
+    {
+      "from": "51b99222-44ab-45e4-b795-201d42f28bad",
+      "outputname": "output",
+      "to": "76a9c577-e6a6-440c-a7d3-c5ded644d4d6",
+      "inputname": "input"
+    },
+    {
+      "from": "574236df-d053-471a-b436-4f9aad53fbe6",
+      "outputname": "output",
+      "to": "76a9c577-e6a6-440c-a7d3-c5ded644d4d6",
+      "inputname": "divisor"
+    },
+    {
+      "from": "76a9c577-e6a6-440c-a7d3-c5ded644d4d6",
+      "outputname": "output",
+      "to": "df386e7e-31d7-4c51-a5f7-8de2569412d5",
+      "inputname": "aspect"
+    },
+    {
+      "from": "01077eed-d15c-40f4-b24e-93988fd8b84d",
+      "outputname": "output",
+      "to": "df386e7e-31d7-4c51-a5f7-8de2569412d5",
+      "inputname": "focal_length"
+    },
+    {
+      "from": "0e912911-4bf5-4627-abdf-f5872f645550",
+      "outputname": "output",
+      "to": "df386e7e-31d7-4c51-a5f7-8de2569412d5",
+      "inputname": "max_zoom"
+    },
+    {
+      "from": "351a7a7f-0d14-4302-a479-edba092fdfdc",
+      "outputname": "output",
+      "to": "df386e7e-31d7-4c51-a5f7-8de2569412d5",
+      "inputname": "head_room"
+    },
+    {
+      "from": "2d16ed9f-9e05-4f2f-ac7f-3e5fa1c6ce6c",
+      "outputname": "output",
+      "to": "df386e7e-31d7-4c51-a5f7-8de2569412d5",
+      "inputname": "camera_roll"
+    },
+    {
+      "from": "03d85a83-a447-4fa1-aa37-01041c7e8896",
+      "outputname": "output",
+      "to": "df386e7e-31d7-4c51-a5f7-8de2569412d5",
+      "inputname": "camera_pitch"
+    },
+    {
+      "from": "b44093dd-1b8a-484e-a1da-693c8c551dfd",
+      "outputname": "posecamera",
+      "to": "f2a9252f-490a-4cd4-b6c8-59c65d5f668b",
+      "inputname": "input"
+    },
+    {
+      "from": "ccac0a6e-e138-41b6-a33d-bb5a941f74d8",
+      "outputname": "client",
+      "to": "5759cce1-b050-44bf-ab15-6ea3c7f3ed29",
+      "inputname": "client"
+    },
+    {
+      "from": "f2a9252f-490a-4cd4-b6c8-59c65d5f668b",
+      "outputname": "json",
+      "to": "e30f83d2-8336-4c01-8fd1-8c6357172e1f",
+      "inputname": "str"
+    },
+    {
+      "from": "2a9954b8-3623-4797-a44e-caefb54e512d",
+      "outputname": "output",
+      "to": "5759cce1-b050-44bf-ab15-6ea3c7f3ed29",
+      "inputname": "host"
+    },
+    {
+      "from": "283bff80-dee5-4443-9e6c-490820b7dd18",
+      "outputname": "output",
+      "to": "5759cce1-b050-44bf-ab15-6ea3c7f3ed29",
+      "inputname": "port"
+    },
+    {
+      "from": "df386e7e-31d7-4c51-a5f7-8de2569412d5",
+      "outputname": "parameters",
+      "to": "b44093dd-1b8a-484e-a1da-693c8c551dfd",
+      "inputname": "camera"
+    },
+    {
+      "from": "7b4b67df-24fb-4bdd-925c-edbe44e46abe",
+      "outputname": "output",
+      "to": "b44093dd-1b8a-484e-a1da-693c8c551dfd",
+      "inputname": "frame"
+    },
+    {
+      "from": "8b5d86ff-3b96-4838-a15e-bbacd2e564ce",
+      "outputname": "output",
+      "to": "903e3915-b07d-4464-920a-539c38d2bf78",
+      "inputname": "pre_frames"
+    },
+    {
+      "from": "07330c85-d8fb-4d7f-ada5-3aae5ad12aac",
+      "outputname": "output",
+      "to": "903e3915-b07d-4464-920a-539c38d2bf78",
+      "inputname": "post_frames"
+    },
+    {
+      "from": "53e6dc21-48c4-43e5-944c-f06cdaf313eb",
+      "outputname": "output",
+      "to": "903e3915-b07d-4464-920a-539c38d2bf78",
+      "inputname": "keyframe_interval"
+    },
+    {
+      "from": "7b4b67df-24fb-4bdd-925c-edbe44e46abe",
+      "outputname": "output",
+      "to": "0aee60f7-c961-4848-9e28-70e64594d532",
+      "inputname": "input"
+    },
+    {
+      "from": "1db5693e-3975-4c47-a56c-e911c16c704e",
+      "outputname": "output",
+      "to": "3749c656-0e3d-43ca-9b08-545e9fb4fa19",
+      "inputname": "pose_func"
+    },
+    {
+      "from": "0aee60f7-c961-4848-9e28-70e64594d532",
+      "outputname": "output",
+      "to": "3749c656-0e3d-43ca-9b08-545e9fb4fa19",
+      "inputname": "frame"
+    },
+    {
+      "from": "3749c656-0e3d-43ca-9b08-545e9fb4fa19",
+      "outputname": "pose",
+      "to": "b44093dd-1b8a-484e-a1da-693c8c551dfd",
+      "inputname": "pose"
+    },
+    {
+      "from": "f79ee94b-a53d-43c0-a47b-dfe57e307586",
+      "outputname": "filter",
+      "to": "7e80e1a5-d58b-411e-b217-4d7ac781061c",
+      "inputname": "filter1"
+    },
+    {
+      "from": "d0339660-9cb3-4c92-9ea1-d485da2c3de6",
+      "outputname": "output",
+      "to": "f3d39195-fbc2-4328-ba55-4dd61c667639",
+      "inputname": "y"
+    },
+    {
+      "from": "1db5693e-3975-4c47-a56c-e911c16c704e",
+      "outputname": "output",
+      "to": "f96df2f3-d513-4e53-8bd7-f7e252cf32d3",
+      "inputname": "pose_func"
+    },
+    {
+      "from": "22677979-6b55-4c46-85a1-99aa6ada35ae",
+      "outputname": "output",
+      "to": "7bf6d22c-2fa2-4c56-a67e-cc7329127ad1",
+      "inputname": "min"
+    },
+    {
+      "from": "8ad6880e-8bcf-47bc-af8c-ae1b80d30736",
+      "outputname": "count",
+      "to": "7bf6d22c-2fa2-4c56-a67e-cc7329127ad1",
+      "inputname": "max"
+    },
+    {
+      "from": "d7563f76-b853-4650-8eb3-28da3b06dff4",
+      "outputname": "output",
+      "to": "f96df2f3-d513-4e53-8bd7-f7e252cf32d3",
+      "inputname": "filename"
+    },
+    {
+      "from": "f3d39195-fbc2-4328-ba55-4dd61c667639",
+      "outputname": "filter",
+      "to": "7e80e1a5-d58b-411e-b217-4d7ac781061c",
+      "inputname": "filter2"
+    },
+    {
+      "from": "6905ec6e-ddb8-436c-ab6c-58558b71a6e8",
+      "outputname": "output",
+      "to": "f79ee94b-a53d-43c0-a47b-dfe57e307586",
+      "inputname": "y"
+    },
+    {
+      "from": "a6794b0d-9f01-40de-a82f-d79a0d7759e8",
+      "outputname": "output",
+      "to": "d7563f76-b853-4650-8eb3-28da3b06dff4",
+      "inputname": "string1"
+    },
+    {
+      "from": "b6cc394f-ce92-4cc5-8e5c-3ff1e2eb0c33",
+      "outputname": "output",
+      "to": "d7563f76-b853-4650-8eb3-28da3b06dff4",
+      "inputname": "string2"
+    },
+    {
+      "from": "3e1d4801-c17f-4dd1-bb4c-b522c05908c0",
+      "outputname": "output",
+      "to": "8aa7f744-0282-4270-b60f-e4d1b5616a43",
+      "inputname": "prefix"
+    },
+    {
+      "from": "ce1255d9-9b38-4ed9-8e39-0ac8d4391ad7",
+      "outputname": "count",
+      "to": "8aa7f744-0282-4270-b60f-e4d1b5616a43",
+      "inputname": "framecount"
+    },
+    {
+      "from": "7e80e1a5-d58b-411e-b217-4d7ac781061c",
+      "outputname": "combined",
+      "to": "fed31814-8050-4f2f-a09c-f1e618df91c2",
+      "inputname": "filter1"
+    },
+    {
+      "from": "574cd8cf-5075-4340-802b-58ce8bf63d56",
+      "outputname": "filter",
+      "to": "fed31814-8050-4f2f-a09c-f1e618df91c2",
+      "inputname": "filter2"
+    },
+    {
+      "from": "a1eca974-8183-4a1e-b6f6-7f66e2fdf8ec",
+      "outputname": "output",
+      "to": "574cd8cf-5075-4340-802b-58ce8bf63d56",
+      "inputname": "c"
+    },
+    {
+      "from": "7025e0a5-2ff1-4d3d-b806-9cf13b4f9d15",
+      "outputname": "output",
+      "to": "79c9780b-d0bd-456f-9540-085f7bbf6011",
+      "inputname": "x"
+    },
+    {
+      "from": "01077eed-d15c-40f4-b24e-93988fd8b84d",
+      "outputname": "output",
+      "to": "ead082e5-eb16-43df-9ac8-b7e167d91381",
+      "inputname": "degrees"
+    },
+    {
+      "from": "7c0f5b16-5613-4795-a5c2-363b22d36176",
+      "outputname": "output",
+      "to": "4eaa4d26-624b-492d-8a0e-c12c7c2d43db",
+      "inputname": "path"
+    },
+    {
+      "from": "ceb41f7a-c8de-4e41-a92c-ce9e245ace85",
+      "outputname": "scaledcontent",
+      "to": "ac658eac-f665-4ec4-9f2b-6fbe4c5e5b93",
+      "inputname": "content_provider"
+    },
+    {
+      "from": "ceb41f7a-c8de-4e41-a92c-ce9e245ace85",
+      "outputname": "scaledcontent",
+      "to": "8ad6880e-8bcf-47bc-af8c-ae1b80d30736",
+      "inputname": "content"
+    },
+    {
+      "from": "2a9954b8-3623-4797-a44e-caefb54e512d",
+      "outputname": "output",
+      "to": "f231be6b-4bff-4ca5-b3da-ade3c636bd88",
+      "inputname": "host"
+    },
+    {
+      "from": "c41a71a8-d0a2-4f39-99f9-ad8f344dcf8d",
+      "outputname": "output",
+      "to": "f231be6b-4bff-4ca5-b3da-ade3c636bd88",
+      "inputname": "port"
+    },
+    {
+      "from": "c8bd67ea-9beb-4781-888f-4ab460987a1a",
+      "outputname": "output",
+      "to": "60afef22-6409-4787-bf74-aab398f845ad",
+      "inputname": "min"
+    },
+    {
+      "from": "8ad6880e-8bcf-47bc-af8c-ae1b80d30736",
+      "outputname": "count",
+      "to": "60afef22-6409-4787-bf74-aab398f845ad",
+      "inputname": "max"
+    },
+    {
+      "from": "609e5085-e8b8-49e0-8872-d150e5711708",
+      "outputname": "FrameToString",
+      "to": "bbbbe767-1ec9-4395-9c2e-452addeea750",
+      "inputname": "IntToStringGenerator"
+    },
+    {
+      "from": "1db5693e-3975-4c47-a56c-e911c16c704e",
+      "outputname": "output",
+      "to": "609e5085-e8b8-49e0-8872-d150e5711708",
+      "inputname": "posefunc"
+    },
+    {
+      "from": "df386e7e-31d7-4c51-a5f7-8de2569412d5",
+      "outputname": "parameters",
+      "to": "609e5085-e8b8-49e0-8872-d150e5711708",
+      "inputname": "camera"
+    },
+    {
+      "from": "c6c7b44e-fea5-47f0-a7a0-dcf5a35a720f",
+      "outputname": "output",
+      "to": "609e5085-e8b8-49e0-8872-d150e5711708",
+      "inputname": "video_file"
+    },
+    {
+      "from": "e30f83d2-8336-4c01-8fd1-8c6357172e1f",
+      "outputname": "bytes",
+      "to": "5759cce1-b050-44bf-ab15-6ea3c7f3ed29",
+      "inputname": "data"
+    },
+    {
+      "from": "df386e7e-31d7-4c51-a5f7-8de2569412d5",
+      "outputname": "parameters",
+      "to": "e01942f8-81fc-4ac9-9569-03f87475761e",
+      "inputname": "camera_parameters"
+    },
+    {
+      "from": "903e3915-b07d-4464-920a-539c38d2bf78",
+      "outputname": "parameters",
+      "to": "e01942f8-81fc-4ac9-9569-03f87475761e",
+      "inputname": "autocam_parameters"
+    },
+    {
+      "from": "9c38bbe4-9f69-4a91-8ad1-d870e50d62e7",
+      "outputname": "outfunc",
+      "to": "e01942f8-81fc-4ac9-9569-03f87475761e",
+      "inputname": "video_content"
+    },
+    {
+      "from": "f4ac437b-34d1-4075-bff6-ba58787b9b9c",
+      "outputname": "output",
+      "to": "6f8fabfe-bab1-4874-a610-bc710bc2b4c7",
+      "inputname": "urlprefix"
+    },
+    {
+      "from": "e183597d-0764-4a00-be8d-3c16d3e9ee9a",
+      "outputname": "serverout",
+      "to": "89ce21e2-1f6a-4513-bc89-28365c366231",
+      "inputname": "server"
+    },
+    {
+      "from": "e01942f8-81fc-4ac9-9569-03f87475761e",
+      "outputname": "pose_func",
+      "to": "af5c1bdd-a986-4fcc-bc39-c3bb7d77ed77",
+      "inputname": "original"
+    },
+    {
+      "from": "e01942f8-81fc-4ac9-9569-03f87475761e",
+      "outputname": "pose_func",
+      "to": "1db5693e-3975-4c47-a56c-e911c16c704e",
+      "inputname": "pose_func"
+    },
+    {
+      "from": "251be58a-ad8e-467a-8b1a-b17c110df0b7",
+      "outputname": "pose_func",
+      "to": "af5c1bdd-a986-4fcc-bc39-c3bb7d77ed77",
+      "inputname": "over_ride"
+    },
+    {
+      "from": "181cd1f7-8349-4a36-868e-9e03e169a208",
+      "outputname": "output",
+      "to": "af5c1bdd-a986-4fcc-bc39-c3bb7d77ed77",
+      "inputname": "properties"
+    },
+    {
+      "from": "df386e7e-31d7-4c51-a5f7-8de2569412d5",
+      "outputname": "parameters",
+      "to": "251be58a-ad8e-467a-8b1a-b17c110df0b7",
+      "inputname": "camera_parameters"
+    },
+    {
+      "from": "d6281409-daa8-4886-a318-4907bd83967a",
+      "outputname": "parameters",
+      "to": "251be58a-ad8e-467a-8b1a-b17c110df0b7",
+      "inputname": "autocam_parameters"
+    },
+    {
+      "from": "f818a78a-0cf2-4f2d-9aa8-4506323bf999",
+      "outputname": "output",
+      "to": "8b6c2599-7ceb-4229-beef-6673bc5fce29",
+      "inputname": "pre_frames"
+    },
+    {
+      "from": "38f72e0e-c24f-4f06-9410-e4c5f893395c",
+      "outputname": "output",
+      "to": "8b6c2599-7ceb-4229-beef-6673bc5fce29",
+      "inputname": "post_frames"
+    },
+    {
+      "from": "dbb7895e-bf35-44af-8a6a-ebe4495f8169",
+      "outputname": "output",
+      "to": "8b6c2599-7ceb-4229-beef-6673bc5fce29",
+      "inputname": "keyframe_interval"
+    },
+    {
+      "from": "a6794b0d-9f01-40de-a82f-d79a0d7759e8",
+      "outputname": "output",
+      "to": "ce1255d9-9b38-4ed9-8e39-0ac8d4391ad7",
+      "inputname": "path"
+    },
+    {
+      "from": "d213d21c-5614-4d74-af45-c8bf70f3373f",
+      "outputname": "output",
+      "to": "ce1255d9-9b38-4ed9-8e39-0ac8d4391ad7",
+      "inputname": "extension"
+    },
+    {
+      "from": "3068ce7f-f7b2-4fe8-be60-3d0435f8de71",
+      "outputname": "handler",
+      "to": "d59341b1-3566-47d0-a462-d8ebaeedf4ce",
+      "inputname": "handler"
+    },
+    {
+      "from": "3068ce7f-f7b2-4fe8-be60-3d0435f8de71",
+      "outputname": "routes",
+      "to": "81b60d49-8ff0-4031-811a-7ee24dfe328a",
+      "inputname": "routes"
+    },
+    {
+      "from": "b3547c18-2fe0-4fe6-88cb-84c5ddb4ba3b",
+      "outputname": "output",
+      "to": "81b60d49-8ff0-4031-811a-7ee24dfe328a",
+      "inputname": "path"
+    },
+    {
+      "from": "7331b2dd-c33e-4998-b65b-2283171e2a13",
+      "outputname": "handler",
+      "to": "81b60d49-8ff0-4031-811a-7ee24dfe328a",
+      "inputname": "handler"
+    },
+    {
+      "from": "6f8fabfe-bab1-4874-a610-bc710bc2b4c7",
+      "outputname": "server",
+      "to": "d59341b1-3566-47d0-a462-d8ebaeedf4ce",
+      "inputname": "server"
+    },
+    {
+      "from": "415000f8-8276-43fb-8f16-baa5d799889a",
+      "outputname": "output",
+      "to": "d59341b1-3566-47d0-a462-d8ebaeedf4ce",
+      "inputname": "actionpath"
+    },
+    {
+      "from": "400c6c7a-547c-4ed2-acb2-7b4c44a23d45",
+      "outputname": "sink",
+      "to": "7331b2dd-c33e-4998-b65b-2283171e2a13",
+      "inputname": "sink"
+    },
+    {
+      "from": "bda8fba3-9ad5-4a89-b7ef-d895ef8a0eb8",
+      "outputname": "value",
+      "to": "b36f13ef-9c26-44b9-9630-c77b230d57d9",
+      "inputname": "str"
+    },
+    {
+      "from": "30992cb7-60d2-4173-b8ad-9f9a4fa04acf",
+      "outputname": "optionalvalue",
+      "to": "bda8fba3-9ad5-4a89-b7ef-d895ef8a0eb8",
+      "inputname": "datavalue"
+    },
+    {
+      "from": "d59341b1-3566-47d0-a462-d8ebaeedf4ce",
+      "outputname": "serverout",
+      "to": "e183597d-0764-4a00-be8d-3c16d3e9ee9a",
+      "inputname": "server"
+    },
+    {
+      "from": "6ab54a04-3aab-4935-a550-a89332e54c08",
+      "outputname": "output",
+      "to": "e183597d-0764-4a00-be8d-3c16d3e9ee9a",
+      "inputname": "actionpath"
+    },
+    {
+      "from": "100d6f44-ced7-41f0-be01-e56cae73efa3",
+      "outputname": "handler",
+      "to": "e183597d-0764-4a00-be8d-3c16d3e9ee9a",
+      "inputname": "handler"
+    },
+    {
+      "from": "94437deb-11d5-46f5-bbe3-f10ffc19724d",
+      "outputname": "output",
+      "to": "100d6f44-ced7-41f0-be01-e56cae73efa3",
+      "inputname": "data"
+    },
+    {
+      "from": "400c6c7a-547c-4ed2-acb2-7b4c44a23d45",
+      "outputname": "source",
+      "to": "30992cb7-60d2-4173-b8ad-9f9a4fa04acf",
+      "inputname": "source"
+    },
+    {
+      "from": "0766e5d5-5f35-4dae-969b-ad37b861ca18",
+      "outputname": "filter",
+      "to": "4fcc7a1d-81f6-481b-9f6b-164e288a3c2f",
+      "inputname": "infilter"
+    },
+    {
+      "from": "a287f869-68f1-4003-852e-41b039d586ca",
+      "outputname": "output",
+      "to": "3efd279c-73f0-4080-9eac-aef2a66b4e51",
+      "inputname": "y"
+    },
+    {
+      "from": "5a73bae6-f71b-4630-b7d4-ebe90d226bda",
+      "outputname": "func",
+      "to": "a4e45162-5483-4332-b664-ae8521ef371f",
+      "inputname": "contentfunc"
+    },
+    {
+      "from": "7f9aeee7-8c65-4b40-aaef-d586563b307b",
+      "outputname": "cache",
+      "to": "1e20a464-6876-45f6-bdda-2e21f2eea627",
+      "inputname": "content"
+    },
+    {
+      "from": "ac658eac-f665-4ec4-9f2b-6fbe4c5e5b93",
+      "outputname": "cached_provider",
+      "to": "5a73bae6-f71b-4630-b7d4-ebe90d226bda",
+      "inputname": "content"
+    },
+    {
+      "from": "b36f13ef-9c26-44b9-9630-c77b230d57d9",
+      "outputname": "output",
+      "to": "7b4b67df-24fb-4bdd-925c-edbe44e46abe",
+      "inputname": "input"
+    },
+    {
+      "from": "ce1255d9-9b38-4ed9-8e39-0ac8d4391ad7",
+      "outputname": "count",
+      "to": "49e11e25-6796-4266-858c-e4af19245abe",
+      "inputname": "numerator"
+    },
+    {
+      "from": "f09485f1-6a89-43ad-8f28-1c4354f1776e",
+      "outputname": "output",
+      "to": "49e11e25-6796-4266-858c-e4af19245abe",
+      "inputname": "denominator"
+    },
+    {
+      "from": "5816419b-a9f1-4c73-836c-bc9025a12735",
+      "outputname": "output",
+      "to": "1e20a464-6876-45f6-bdda-2e21f2eea627",
+      "inputname": "yolosize"
+    },
+    {
+      "from": "31893c86-102d-4cf2-85af-769b6b5a1b99",
+      "outputname": "output",
+      "to": "1e20a464-6876-45f6-bdda-2e21f2eea627",
+      "inputname": "width"
+    },
+    {
+      "from": "ced73579-6c5b-4dc0-899f-94ab4cfcaa7f",
+      "outputname": "output",
+      "to": "1e20a464-6876-45f6-bdda-2e21f2eea627",
+      "inputname": "height"
+    },
+    {
+      "from": "8aa7f744-0282-4270-b60f-e4d1b5616a43",
+      "outputname": "content",
+      "to": "7f9aeee7-8c65-4b40-aaef-d586563b307b",
+      "inputname": "slow"
+    },
+    {
+      "from": "4eaa4d26-624b-492d-8a0e-c12c7c2d43db",
+      "outputname": "db",
+      "to": "7f9aeee7-8c65-4b40-aaef-d586563b307b",
+      "inputname": "db"
+    },
+    {
+      "from": "351d7720-ec77-47f9-bfa3-2a9e396ec11e",
+      "outputname": "output",
+      "to": "7f9aeee7-8c65-4b40-aaef-d586563b307b",
+      "inputname": "keyprefix"
+    },
+    {
+      "from": "3068ce7f-f7b2-4fe8-be60-3d0435f8de71",
+      "outputname": "routes",
+      "to": "d6c03c5f-464a-40c7-a947-3ea83efe918c",
+      "inputname": "routes"
+    },
+    {
+      "from": "5c537a57-f9d9-4ba9-8313-4ad28a64627c",
+      "outputname": "output",
+      "to": "d6c03c5f-464a-40c7-a947-3ea83efe918c",
+      "inputname": "path"
+    },
+    {
+      "from": "02b2e210-d72e-43ce-8766-82484c9096d1",
+      "outputname": "handler",
+      "to": "d6c03c5f-464a-40c7-a947-3ea83efe918c",
+      "inputname": "handler"
+    },
+    {
+      "from": "a11b3ff6-9a96-4516-bfc9-5bd67ad0fecd",
+      "outputname": "sink",
+      "to": "02b2e210-d72e-43ce-8766-82484c9096d1",
+      "inputname": "sink"
+    },
+    {
+      "from": "a11b3ff6-9a96-4516-bfc9-5bd67ad0fecd",
+      "outputname": "source",
+      "to": "911a122f-027d-4e06-ac3a-882f77cb4326",
+      "inputname": "source"
+    },
+    {
+      "from": "911a122f-027d-4e06-ac3a-882f77cb4326",
+      "outputname": "optionalvalue",
+      "to": "e0a69d9e-a1a9-4352-9cf4-0328c06f6904",
+      "inputname": "datavalue"
+    },
+    {
+      "from": "e0a69d9e-a1a9-4352-9cf4-0328c06f6904",
+      "outputname": "value",
+      "to": "8b0a4441-588c-4611-b8ee-5cd847bbcc0f",
+      "inputname": "str"
+    },
+    {
+      "from": "b93f8930-573b-4832-932a-ee32e615ade7",
+      "outputname": "output",
+      "to": "8aa7f744-0282-4270-b60f-e4d1b5616a43",
+      "inputname": "fps"
+    },
+    {
+      "from": "1e20a464-6876-45f6-bdda-2e21f2eea627",
+      "outputname": "gridcontent",
+      "to": "ceb41f7a-c8de-4e41-a92c-ce9e245ace85",
+      "inputname": "content"
+    },
+    {
+      "from": "61df477f-45bc-46ab-9deb-eebea23386f9",
+      "outputname": "output",
+      "to": "ceb41f7a-c8de-4e41-a92c-ce9e245ace85",
+      "inputname": "scale"
+    },
+    {
+      "from": "49e11e25-6796-4266-858c-e4af19245abe",
+      "outputname": "result",
+      "to": "94437deb-11d5-46f5-bbe3-f10ffc19724d",
+      "inputname": "a"
+    },
+    {
+      "from": "61df477f-45bc-46ab-9deb-eebea23386f9",
+      "outputname": "output",
+      "to": "94437deb-11d5-46f5-bbe3-f10ffc19724d",
+      "inputname": "b"
+    },
+    {
+      "from": "3007119a-25e4-4edb-9409-b9f71b3df4e1",
+      "outputname": "output",
+      "to": "df386e7e-31d7-4c51-a5f7-8de2569412d5",
+      "inputname": "video_aspect"
+    },
+    {
+      "from": "a04d2d32-7b20-4a79-bac3-636c1d377ea7",
+      "outputname": "output",
+      "to": "3007119a-25e4-4edb-9409-b9f71b3df4e1",
+      "inputname": "input"
+    },
+    {
+      "from": "289d82fc-823a-4987-9259-7b02c8e1a3d5",
+      "outputname": "output",
+      "to": "3007119a-25e4-4edb-9409-b9f71b3df4e1",
+      "inputname": "divisor"
+    },
+    {
+      "from": "992bf92e-3cbe-4196-aec5-88bba4de92de",
+      "outputname": "range",
+      "to": "bbbbe767-1ec9-4395-9c2e-452addeea750",
+      "inputname": "frame_range"
+    },
+    {
+      "from": "05fc5c06-7cf0-4491-97c6-cc4b451cf19c",
+      "outputname": "output",
+      "to": "609e5085-e8b8-49e0-8872-d150e5711708",
+      "inputname": "video_offset"
+    },
+    {
+      "from": "3068ce7f-f7b2-4fe8-be60-3d0435f8de71",
+      "outputname": "routes",
+      "to": "1f9e12c9-701b-421b-a75c-397f610dd202",
+      "inputname": "routes"
+    },
+    {
+      "from": "a2cda8f5-9dea-4b58-b433-75c3839fe9c7",
+      "outputname": "handler",
+      "to": "1f9e12c9-701b-421b-a75c-397f610dd202",
+      "inputname": "handler"
+    },
+    {
+      "from": "5f908c47-7fcf-40e4-849a-025b1743aeb1",
+      "outputname": "output",
+      "to": "1f9e12c9-701b-421b-a75c-397f610dd202",
+      "inputname": "path"
+    },
+    {
+      "from": "32ab8e91-efe1-47b5-9be4-e42e3a37f62d",
+      "outputname": "sink",
+      "to": "a2cda8f5-9dea-4b58-b433-75c3839fe9c7",
+      "inputname": "queue"
+    },
+    {
+      "from": "32ab8e91-efe1-47b5-9be4-e42e3a37f62d",
+      "outputname": "source",
+      "to": "170ecbe8-3bb8-42e1-bd68-ec5411df031a",
+      "inputname": "source"
+    },
+    {
+      "from": "170ecbe8-3bb8-42e1-bd68-ec5411df031a",
+      "outputname": "optionalvalue",
+      "to": "32e667ec-7d91-46b4-827f-08f8ad2f51a0",
+      "inputname": "datavalue"
+    },
+    {
+      "from": "32e667ec-7d91-46b4-827f-08f8ad2f51a0",
+      "outputname": "value",
+      "to": "e11ef7c6-cd8f-4a86-ac79-cf5405ee079e",
+      "inputname": "request"
+    },
+    {
+      "from": "b131f5a0-acea-4ba5-89fd-83501395b389",
+      "outputname": "handler",
+      "to": "e11ef7c6-cd8f-4a86-ac79-cf5405ee079e",
+      "inputname": "handler"
+    },
+    {
+      "from": "a4e45162-5483-4332-b664-ae8521ef371f",
+      "outputname": "filteredcontent",
+      "to": "9c38bbe4-9f69-4a91-8ad1-d870e50d62e7",
+      "inputname": "infunc"
+    },
+    {
+      "from": "9c38bbe4-9f69-4a91-8ad1-d870e50d62e7",
+      "outputname": "outfunc",
+      "to": "251be58a-ad8e-467a-8b1a-b17c110df0b7",
+      "inputname": "video_content"
+    },
+    {
+      "from": "9c38bbe4-9f69-4a91-8ad1-d870e50d62e7",
+      "outputname": "outfunc",
+      "to": "b131f5a0-acea-4ba5-89fd-83501395b389",
+      "inputname": "content"
+    },
+    {
+      "from": "3068ce7f-f7b2-4fe8-be60-3d0435f8de71",
+      "outputname": "routes",
+      "to": "0ca429f6-0386-4689-a5e7-9dd837d88651",
+      "inputname": "routes"
+    },
+    {
+      "from": "4b7db291-09de-43dd-b8f3-49c2e1b7f631",
+      "outputname": "output",
+      "to": "0ca429f6-0386-4689-a5e7-9dd837d88651",
+      "inputname": "path"
+    },
+    {
+      "from": "bfc19f5f-6710-41a2-b47a-8c6465b93239",
+      "outputname": "handler",
+      "to": "0ca429f6-0386-4689-a5e7-9dd837d88651",
+      "inputname": "handler"
+    },
+    {
+      "from": "6a599932-37c7-4496-a5be-1254d65a9dde",
+      "outputname": "sink",
+      "to": "bfc19f5f-6710-41a2-b47a-8c6465b93239",
+      "inputname": "sink"
+    },
+    {
+      "from": "6a599932-37c7-4496-a5be-1254d65a9dde",
+      "outputname": "source",
+      "to": "e5e8c8c5-4685-4cc6-8666-9c058abdaf93",
+      "inputname": "source"
+    },
+    {
+      "from": "e5e8c8c5-4685-4cc6-8666-9c058abdaf93",
+      "outputname": "optionalvalue",
+      "to": "a4f013f6-888e-4d9d-963f-81de83660bd7",
+      "inputname": "datavalue"
+    },
+    {
+      "from": "a4f013f6-888e-4d9d-963f-81de83660bd7",
+      "outputname": "value",
+      "to": "d6281409-daa8-4886-a318-4907bd83967a",
+      "inputname": "str"
+    },
+    {
+      "from": "8ad6880e-8bcf-47bc-af8c-ae1b80d30736",
+      "outputname": "count",
+      "to": "992bf92e-3cbe-4196-aec5-88bba4de92de",
+      "inputname": "max"
+    },
+    {
+      "from": "05fc5c06-7cf0-4491-97c6-cc4b451cf19c",
+      "outputname": "output",
+      "to": "992bf92e-3cbe-4196-aec5-88bba4de92de",
+      "inputname": "min"
+    },
+    {
+      "from": "a287f869-68f1-4003-852e-41b039d586ca",
+      "outputname": "output",
+      "to": "0766e5d5-5f35-4dae-969b-ad37b861ca18",
+      "inputname": "y"
+    },
+    {
+      "from": "ddfb95a6-1bef-4381-bd71-a57bc1dd1da3",
+      "outputname": "filter",
+      "to": "a4e45162-5483-4332-b664-ae8521ef371f",
+      "inputname": "wherepredicate"
+    },
+    {
+      "from": "4fcc7a1d-81f6-481b-9f6b-164e288a3c2f",
+      "outputname": "outfilter",
+      "to": "60c1ef17-2050-473a-b8c6-228dbf58f04e",
+      "inputname": "filter1"
+    },
+    {
+      "from": "ddfb95a6-1bef-4381-bd71-a57bc1dd1da3",
+      "outputname": "filter",
+      "to": "60c1ef17-2050-473a-b8c6-228dbf58f04e",
+      "inputname": "filter2"
+    },
+    {
+      "from": "0e415401-1c3b-4900-8705-ba7883f4a151",
+      "outputname": "output",
+      "to": "ddfb95a6-1bef-4381-bd71-a57bc1dd1da3",
+      "inputname": "c"
+    },
+    {
+      "from": "0ae067ea-e917-4a89-a0ff-58af67b1d053",
+      "outputname": "output",
+      "to": "351d7720-ec77-47f9-bfa3-2a9e396ec11e",
+      "inputname": "string1"
+    },
+    {
+      "from": "3e1d4801-c17f-4dd1-bb4c-b522c05908c0",
+      "outputname": "output",
+      "to": "351d7720-ec77-47f9-bfa3-2a9e396ec11e",
+      "inputname": "string2"
+    },
+    {
+      "from": "ead082e5-eb16-43df-9ac8-b7e167d91381",
+      "outputname": "radians",
+      "to": "be61a005-2364-4f87-a5e5-cc104d52c825",
+      "inputname": "input"
+    },
+    {
+      "from": "be61a005-2364-4f87-a5e5-cc104d52c825",
+      "outputname": "output",
+      "to": "7c27e644-0665-49f5-8fb1-132ed51e8953",
+      "inputname": "input"
+    },
+    {
+      "from": "3007119a-25e4-4edb-9409-b9f71b3df4e1",
+      "outputname": "output",
+      "to": "7c27e644-0665-49f5-8fb1-132ed51e8953",
+      "inputname": "divisor"
+    },
+    {
+      "from": "8f98cd11-9839-41b1-9d5d-c7305635fad2",
+      "outputname": "output",
+      "to": "1089ae6e-11e1-4d7b-988c-3ec604556416",
+      "inputname": "actionpath"
+    },
+    {
+      "from": "31fbda85-94b0-4959-986e-5c6cf40e63bc",
+      "outputname": "output",
+      "to": "b6c2597f-7363-4b7a-95d9-ec5c6f5e553f",
+      "inputname": "urlprefix"
+    },
+    {
+      "from": "b6c2597f-7363-4b7a-95d9-ec5c6f5e553f",
+      "outputname": "server",
+      "to": "1089ae6e-11e1-4d7b-988c-3ec604556416",
+      "inputname": "server"
+    },
+    {
+      "from": "501420b4-7bd9-4040-9d07-deac4e199ec1",
+      "outputname": "handler",
+      "to": "1089ae6e-11e1-4d7b-988c-3ec604556416",
+      "inputname": "handler"
+    },
+    {
+      "from": "8f98cd11-9839-41b1-9d5d-c7305635fad2",
+      "outputname": "output",
+      "to": "501420b4-7bd9-4040-9d07-deac4e199ec1",
+      "inputname": "data"
+    },
+    {
+      "from": "1089ae6e-11e1-4d7b-988c-3ec604556416",
+      "outputname": "serverout",
+      "to": "2248d151-76a1-4b53-8f45-9ec5839fd7b9",
+      "inputname": "server"
+    },
+    {
+      "from": "1089ae6e-11e1-4d7b-988c-3ec604556416",
+      "outputname": "serverout",
+      "to": "a992a3bb-4fa0-4593-b5c7-6e635fce2f33",
+      "inputname": "server"
+    },
+    {
+      "from": "8f98cd11-9839-41b1-9d5d-c7305635fad2",
+      "outputname": "output",
+      "to": "a992a3bb-4fa0-4593-b5c7-6e635fce2f33",
+      "inputname": "actionpath"
+    },
+    {
+      "from": "dce60409-02e1-45da-9bab-7b8114de0ee2",
+      "outputname": "handler",
+      "to": "a992a3bb-4fa0-4593-b5c7-6e635fce2f33",
+      "inputname": "handler"
+    },
+    {
+      "from": "00acd598-d3af-4527-b96f-57b9d3ddb418",
+      "outputname": "channel",
+      "to": "dce60409-02e1-45da-9bab-7b8114de0ee2",
+      "inputname": "channel"
+    },
+    {
+      "from": "00acd598-d3af-4527-b96f-57b9d3ddb418",
+      "outputname": "channel",
+      "to": "309521bb-f266-4ccd-9bcc-2420ba7ce936",
+      "inputname": "channel"
+    }
+  ],
+  "Portals": []
+}

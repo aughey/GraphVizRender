@@ -1,12 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { ShowGraph } from './GraphView/ShowGraph';
 
 function App() {
+  const [data, setData] = React.useState<string | null>(null);
+
+  React.useEffect(() => {
+    fetch('/newsies.ive')
+      .then((response) => response.json())
+      .then((data) => setData(data));
+  },[]);
+
+  if(!data) {
+    return null;
+  }
+
   const graph = {
-    Nodes: [],
-    Connections: []
+    Nodes:{},
+    Connections: {}
   }
 
   return (
@@ -14,25 +25,6 @@ function App() {
       <ShowGraph graph={graph} />
     </div>
   )
-
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
 }
 
 export default App;
