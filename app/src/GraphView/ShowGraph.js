@@ -7,12 +7,16 @@ function Dot({ dot }) {
   const ref = useRef(null);
 
   const startApp = () => {
-    const graph = d3.select(ref.current);
+    const graph = d3.select(ref.current).select("svg");
     var nodes = graph.selectAll(".node");
     var edges = graph.selectAll(".edge");
 
+    const DeSelect = () => {
+      edges.select('path').classed("selectedin",false).classed("selectedout", false);
+    }
+
     // click outside of nodes
-    d3.select(document).on("click", function (e) {
+    graph.on("click", function (e) {
       var event = e;
       event.preventDefault();
       event.stopPropagation();
@@ -41,7 +45,7 @@ function Dot({ dot }) {
     // move
     d3.select(document).on("mousemove", function (e) {
       return;
-    //  console.log(e)
+      //  console.log(e)
       var event = e;
       event.preventDefault();
       event.stopPropagation();
@@ -57,10 +61,19 @@ function Dot({ dot }) {
     });
 
     // click and mousedown on nodes
-    nodes.on("click mousedown", function (e) {
+    nodes.on("click", function (e) {
       var event = e;
       event.preventDefault();
       console.log('node click or mousedown');
+
+      console.log(this);
+      const id = d3.select(this).attr("id");
+      const title = d3.select(this).select("title").text();
+
+      DeSelect();
+      edges.selectAll(`.EDGEFROM${title} path`).attr('class', 'selectedout');
+      edges.selectAll(`.EDGETO${title} path`).attr('class', 'selectedin');
+
       //   unSelectEdge();
     });
 
@@ -109,6 +122,7 @@ function Dot({ dot }) {
       event.stopPropagation();
       console.log('edge node click or mousedown');
       //   selectEdge(d3.select(this));
+
     });
 
     // right-click outside of nodes
@@ -128,7 +142,7 @@ function Dot({ dot }) {
       return;
     }
     d3.select(ref.current)
-      .graphviz({ width: '100%', zoom: true, useWorker: false, fit: true, height: 500 })
+      .graphviz({ width: '100%', zoom: true, useWorker: false, fit: true, height: '100%' })
       .renderDot(dot, startApp);
 
     console.log("rendered dot")
@@ -172,10 +186,12 @@ export function ShowGraph({ graph }) {
     const to = graph.Nodes[c.To];
     const srcindex = portIndex(from.Outputs, c.Output);
     const dstindex = portIndex(to.Inputs, c.Input);
-    return `${id(c.From)}:o${srcindex} -> ${id(c.To)}:i${dstindex};`
+    const fromid = id(c.From);
+    const toid = id(c.To);
+    return `${fromid}:o${srcindex} -> ${toid}:i${dstindex} [class="EDGEFROM${fromid} EDGETO${toid}"];`
   }
 
-  var nodes = Object.keys(graph.Nodes).map(k => `${id(k)} [label=<${nodetable(graph.Nodes[k])}>];`);
+  var nodes = Object.keys(graph.Nodes).map(k => `${id(k)} [id="${k}" label=<${nodetable(graph.Nodes[k])}>];`);
   var connections = Object.keys(graph.Connections).map(k => connection(graph.Connections[k]));
 
   const dot = `
@@ -188,9 +204,7 @@ digraph{
 
 
   return (
-    <div style={{ width: '100%' }}>
-      <h2>Rendering graph with {nodes.length} nodes</h2>
-
+    <div className="graphcontainer">
       <Dot dot={dot} />
     </div>
   )
