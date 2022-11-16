@@ -1,5 +1,19 @@
-import { Graphviz } from 'graphviz-react';
-import { useState } from 'react';
+//import { Graphviz } from 'graphviz-react';
+import { useState, useEffect } from 'react';
+
+const d3 = window.d3;
+
+function Dot({dot}) {
+  useEffect(() => {
+    d3.select("#graph")
+  .graphviz({ width: '100%', zoom: true, useWorker: true, fit: true, height: 500 })
+    .renderDot(dot);
+
+      console.log("rendered dot")
+  }, [dot]);
+
+  return (<div id="graph"></div>)
+}
 
 export function ShowGraph({ graph }) {
   const [stripGraph, setStripGraph] = useState(false);
@@ -63,11 +77,10 @@ digraph{
 
   return (
     <div style={{ width: '100%' }}>
-      <script src="https://unpkg.com/@hpcc-js/wasm/dist/index.min.js" type="application/javascript/"></script>
+      <h2>Rendering graph with {nodes.length} nodes</h2>
 
-
-
-      <Graphviz className="graphviz" options={{ width: '100%', zoom: true, useWorker: false }} dot={dot} />
+      {/* <Graphviz className="graphviz" options={{ width: '100%', zoom: true, useWorker: false }} dot={dot} /> */}
+      <Dot dot={dot}/>
       String Graph: <input type="checkbox" checked={stripGraph} onChange={e => setStripGraph(e.target.checked)} />
       Double Quote: <input type="checkbox" checked={doubleQuote} onChange={e => setDoubleQuote(e.target.checked)} />
       {/* <pre>
