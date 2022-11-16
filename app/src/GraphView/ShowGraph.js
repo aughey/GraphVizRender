@@ -1,32 +1,145 @@
 //import { Graphviz } from 'graphviz-react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 const d3 = window.d3;
 
-function Dot({dot}) {
-  useEffect(() => {
-    d3.select("#graph")
-  .graphviz({ width: '100%', zoom: true, useWorker: true, fit: true, height: 500 })
-    .renderDot(dot);
+function Dot({ dot }) {
+  const ref = useRef(null);
 
-      console.log("rendered dot")
+  const startApp = () => {
+    const graph = d3.select(ref.current);
+    var nodes = graph.selectAll(".node");
+    var edges = graph.selectAll(".edge");
+
+    // click outside of nodes
+    d3.select(document).on("click", function (e) {
+      var event = e;
+      event.preventDefault();
+      event.stopPropagation();
+      console.log('document click');
+      //   unSelectEdge();
+    });
+
+    // keyup outside of nodes
+    d3.select(document).on("keyup", function () {
+      var event = d3.event;
+      event.preventDefault();
+      console.log('document keyup', event);
+      // if (event.keyCode == 27) {
+      //     graphviz.removeDrawnEdge();
+      //     unSelectEdge();
+      // }
+      // if (event.keyCode == 46) {
+      //     deleteSelectedEdge();
+      //     graphviz.removeDrawnEdge();
+      //     graphviz
+      //         .renderDot(dotSrc, startApp);
+      // }
+      // isDrawing = false;
+    });
+
+    // move
+    d3.select(document).on("mousemove", function (e) {
+      return;
+    //  console.log(e)
+      var event = e;
+      event.preventDefault();
+      event.stopPropagation();
+      console.log('document mousemove');
+      var graph0 = graph.selectWithoutDataPropagation("svg").selectWithoutDataPropagation("g");
+      var [x0, y0] = d3.pointer(e);
+      console.log('x0, y0', x0, y0);
+      // var shortening = 2; // avoid mouse pointing on edge
+      // if (isDrawing) {
+      //     graphviz
+      //         .moveDrawnEdgeEndPoint(x0, y0,  {shortening: shortening})
+      // }
+    });
+
+    // click and mousedown on nodes
+    nodes.on("click mousedown", function (e) {
+      var event = e;
+      event.preventDefault();
+      console.log('node click or mousedown');
+      //   unSelectEdge();
+    });
+
+    // double-click on nodes
+    nodes.on("dblclick", function (e) {
+      var event = e;
+      event.preventDefault();
+      event.stopPropagation();
+      console.log('node dblclick');
+      // unSelectEdge();
+      // if (isDrawing) {
+      //     var endNode = d3.select(this);
+      //     var startNodeName = startNode.selectWithoutDataPropagation("title").text();
+      //     var endNodeName = endNode.selectWithoutDataPropagation("title").text();
+      //     graphviz
+      //         .insertDrawnEdge(startNodeName + '->' + endNodeName);
+      //     var dotSrcLines = dotSrc.split('\n');
+      //     var newEdgeString = startNodeName + ' -> ' + endNodeName + ' [color="#800080"; fillcolor="orange"; penwidth="1"]';
+      //     dotSrcLines.splice(-1, 0, newEdgeString);
+      //     dotSrc = dotSrcLines.join('\n');
+      //     graphviz
+      //         .renderDot(dotSrc, startApp);
+      // }
+      // isDrawing = false;
+    });
+
+    // right-click on nodes
+    nodes.on("contextmenu", function (e) {
+      var event = e;
+      event.preventDefault();
+      event.stopPropagation();
+      console.log('node contextmenu');
+      // unSelectEdge();
+      // startNode = d3.select(this);
+      // var graph0 = graph.selectWithoutDataPropagation("svg").selectWithoutDataPropagation("g");
+      // var [x0, y0] = d3.pointer(graph0.node());
+      // graphviz
+      //     .drawEdge(x0, y0, x0, y0, {fillcolor: "orange", color: "#800080"})
+      // isDrawing = true;
+    });
+
+    // click and mousedown on edges
+    edges.on("click mousedown", function (e) {
+      var event = e;
+      event.preventDefault();
+      event.stopPropagation();
+      console.log('edge node click or mousedown');
+      //   selectEdge(d3.select(this));
+    });
+
+    // right-click outside of nodes
+    d3.select(document).on("contextmenu", function (e) {
+      var event = e;
+      event.preventDefault();
+      event.stopPropagation();
+      console.log('document contextmenu');
+      //  unSelectEdge();
+    });
+
+    console.log("Started app");
+  }
+
+  useEffect(() => {
+    if (!ref.current) {
+      return;
+    }
+    d3.select(ref.current)
+      .graphviz({ width: '100%', zoom: true, useWorker: false, fit: true, height: 500 })
+      .renderDot(dot, startApp);
+
+    console.log("rendered dot")
   }, [dot]);
 
-  return (<div id="graph"></div>)
+  return (<div ref={ref}></div>)
 }
 
 export function ShowGraph({ graph }) {
-  const [stripGraph, setStripGraph] = useState(false);
-  const [doubleQuote, setDoubleQuote] = useState(false);
 
   if (!graph) return null;
-
-  if (stripGraph) {
-    graph = {
-      ...graph,
-      Nodes: graph.Nodes.map(n => ({ Id: n.Id, Kind: n.Kind, Parameters: n.Parameters }))
-    }
-  }
 
   function id(i) {
     return "ID" + i.replace(/-/g, '');
@@ -39,10 +152,10 @@ export function ShowGraph({ graph }) {
 
     const preamble = `<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
       <TR><TD COLSPAN="2">${n.Kind}</TD></TR>`
-      //<TR><TD>Inputs</TD><TD>Outputs</TD></TR>`
+    //<TR><TD>Inputs</TD><TD>Outputs</TD></TR>`
 
     const ports = [];
-    for(let i = 0; i < portlength; i++) {
+    for (let i = 0; i < portlength; i++) {
       ports.push(`<TR><TD PORT="i${i}">${inputs[i]?.Name || ''}</TD><TD PORT="o${i}">${outputs[i]?.Name || ''}</TD></TR>`);
     }
 
@@ -73,19 +186,12 @@ digraph{
   ${connections.join("\n")}
 }`;
 
-  const graphstring = doubleQuote ? JSON.stringify(graph, null, 2).replace(/"/g, '""') : JSON.stringify(graph, null, 2);
 
   return (
     <div style={{ width: '100%' }}>
       <h2>Rendering graph with {nodes.length} nodes</h2>
 
-      {/* <Graphviz className="graphviz" options={{ width: '100%', zoom: true, useWorker: false }} dot={dot} /> */}
-      <Dot dot={dot}/>
-      String Graph: <input type="checkbox" checked={stripGraph} onChange={e => setStripGraph(e.target.checked)} />
-      Double Quote: <input type="checkbox" checked={doubleQuote} onChange={e => setDoubleQuote(e.target.checked)} />
-      {/* <pre>
-        {graphstring}
-      </pre> */}
+      <Dot dot={dot} />
     </div>
   )
 }
