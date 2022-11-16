@@ -1,5 +1,5 @@
 //import { Graphviz } from 'graphviz-react';
-import { useState, useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 const d3 = window.d3;
 
@@ -25,34 +25,33 @@ function Dot({ dot }) {
     });
 
     // keyup outside of nodes
-    d3.select(document).on("keyup", function () {
-      var event = d3.event;
-      event.preventDefault();
-      console.log('document keyup', event);
-      // if (event.keyCode == 27) {
-      //     graphviz.removeDrawnEdge();
-      //     unSelectEdge();
-      // }
-      // if (event.keyCode == 46) {
-      //     deleteSelectedEdge();
-      //     graphviz.removeDrawnEdge();
-      //     graphviz
-      //         .renderDot(dotSrc, startApp);
-      // }
-      // isDrawing = false;
-    });
+    // d3.select(document).on("keyup", function (e) {
+    //   var event = e;
+    //   event.preventDefault();
+    //   console.log('document keyup', event);
+    //   // if (event.keyCode == 27) {
+    //   //     graphviz.removeDrawnEdge();
+    //   //     unSelectEdge();
+    //   // }
+    //   // if (event.keyCode == 46) {
+    //   //     deleteSelectedEdge();
+    //   //     graphviz.removeDrawnEdge();
+    //   //     graphviz
+    //   //         .renderDot(dotSrc, startApp);
+    //   // }
+    //   // isDrawing = false;
+    // });
 
     // move
     d3.select(document).on("mousemove", function (e) {
-      return;
       //  console.log(e)
-      var event = e;
-      event.preventDefault();
-      event.stopPropagation();
-      console.log('document mousemove');
-      var graph0 = graph.selectWithoutDataPropagation("svg").selectWithoutDataPropagation("g");
-      var [x0, y0] = d3.pointer(e);
-      console.log('x0, y0', x0, y0);
+      // var event = e;
+      // event.preventDefault();
+      // event.stopPropagation();
+      // console.log('document mousemove');
+      // var graph0 = graph.selectWithoutDataPropagation("svg").selectWithoutDataPropagation("g");
+      // var [x0, y0] = d3.pointer(e);
+      // console.log('x0, y0', x0, y0);
       // var shortening = 2; // avoid mouse pointing on edge
       // if (isDrawing) {
       //     graphviz
@@ -64,10 +63,8 @@ function Dot({ dot }) {
     nodes.on("click", function (e) {
       var event = e;
       event.preventDefault();
-      console.log('node click or mousedown');
 
-      console.log(this);
-      const id = d3.select(this).attr("id");
+      //const id = d3.select(this).attr("id");
       const title = d3.select(this).select("title").text();
 
       DeSelect();
