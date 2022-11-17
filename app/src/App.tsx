@@ -1,6 +1,9 @@
 import React from 'react';
 import './App.css';
 import { ShowGraph } from './GraphView/ShowGraph';
+import CommandPalette from 'react-command-palette';
+import { Command } from 'react-command-palette';
+import { top_commands, ExtensionCommand } from './Commands';
 
 interface Port {
   Kind: string;
@@ -70,10 +73,47 @@ function App() {
     return null;
   }
 
+  const commands : any[] = [
+    {
+      name: 'Add Node',
+      command: () => {
+        console.log('Add Node');
+      }
+    }
+  ];
+
   return (
     <div>
       <ShowGraph graph={graph} />
+      <IVECommandPalette/>
     </div>
+  )
+}
+
+function IVECommandPalette() {
+  const [commands, setCommands] = React.useState<ExtensionCommand[]>(top_commands);
+  const [open, setOpen] = React.useState<boolean>(true);
+
+  const wrap = (command: ExtensionCommand, index: number) : Command => {
+    return {
+      id: index,
+      color: 'white',
+      name: command.name,
+      command: () => {
+        console.log("In wrapped command");
+        const result = command.command();
+        if(!result) {
+          
+        }
+        setTimeout(() => setOpen(false),2000);
+      }
+    }
+  };
+
+  const wrapped_commands = commands.map(wrap);
+
+  return (
+    <CommandPalette   onAfterOpen={ () => setOpen(true) } open={open} commands={wrapped_commands} />
   )
 }
 

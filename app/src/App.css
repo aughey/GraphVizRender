@@ -38,6 +38,7 @@
 }
 
 .graphcontainer {
+  z-index: -3;
   position: absolute;
   left: 0px;
   top: 0px;
@@ -66,4 +67,8 @@
 
 .graphcontainer path.selectedin {
   stroke: red;
+}
+
+svg polygon {
+  fill: none;
 }
